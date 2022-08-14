@@ -1,0 +1,6 @@
+name: mad-dev-guides-m4
+title: Module 4
+version: main
+nav:
+  - modules/ROOT/nav.adoc
+start_page: ROOT:1-introduction.adoc
