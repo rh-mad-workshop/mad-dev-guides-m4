@@ -1,0 +1,68 @@
+= Red Hat OpenShift Service Registry
+
+OpenShift Service Registry is a datastore for sharing standard event schemas and API designs across event-driven and API architectures. In this section you will explore and learn about this managed service hosted on http://console.redhat.com[Red Hat Hybrid Cloud Console, role=external,window=_blank]
+
+== Discover Red Hat OpenShift Service Registry
+
+. If not already open, navigate to the https://console.redhat.com/beta/application-services/service-registry[Service Registry] from the browser. If necessary, login with your Red Hat account that you are using for this workshop.
+
+. You will see a listing of all Service Registry instances. In this labs, you will use the Service Registry instance  `globex` that you created in a previous step. 
+
++
+image::osr_landing_page.png[]
+
+. Click on the registry  `globex` to view the artifacts. You will see the schema  `globex / Product Catalog API (ProductCatalogAPI)` that you exported from the `API Designer` in the previous section of the labs.
++
+image::osr_artifacts.png[]
+
+. Click on the `Product Catalog API` to  view the details of the ProductCatalogAPI schema. This overview page provides details about this registry. You will find details about the schema on this page. 
++
+image::osr-api-overview.png[]
+. Click on the  `Documentation` tab to view the OpenAPI specifications 
+. Click on the  `Content` tab to view the schema in JSON format
+
+== Enabling Content Rules for format validity
+. Navigate  back to the `Overview` tab.
+
+. Observe the `Content rules` section which provides options to validate the schema and  enforce compatibility while the artifact is updated
++
+image::osr-api-content-rules.png[] 
+
+. Click on `Enable` button against the  "Validity Rule" and choose `Full` from the dropdown. This rules ensures that the content is valid when the artifact is updated.
++
+image::osr-content-rules.png[]
+
+. Click on the `*Content*` tab. Copy the entire content of the artifact shown in this tab (into the memory by Ctrl+A and Ctrl+C)
++
+image::osr-view-content.png[]
+
+. Click on the `*Upload new version*` button on the top-right of the page
++
+image::osr-upload-new-popup.png[] 
+
+. Paste the content of the schema that you copied in the previous steps into the textbox provided (Ctrl+V). 
+
+. Delete the closing `}` at the bottom of the text box and  click `Upload`
+* *The original content*
++
+image::osr-original-api-content.png[] 
+* *After introducing an error*
++
+image::osr-edit-schema-with-error.png[]
+
+. You will observe an `*Invalid Content Error*` stating that one of the content rules has been violated, displays details of the error. The artifact Content is not updated.
++
+image::osr-error.png[]
+
+. Click on `Close` to dismiss error
+
+[NOTE]
+====
+In real-life, the content rules are very helpful when APIs are used to manage Service Registry schema updates. To learn more about how to use manage the Service Registry content from the https://access.redhat.com/documentation/en-us/red_hat_openshift_service_registry[product page] under the `Manage Service Registry content` section.
+
+OpenShift Service Registry also provides full integration with Red Hat OpenShift Streams for Apache Kafka to map your Kafka topics to the appropriate schemas. https://access.redhat.com/documentation/en-us/red_hat_openshift_streams_for_apache_kafka/1/guide/7d28aec8-e146-44db-a4a5-fafc1f426ca5#_af7a70bc-0a97-41c9-a06a-2a0287bd7119[Read more] about this
+
+====
+
+In the next step you will explore the use of the ProductCatalogAPI specification to setup mocks.
+

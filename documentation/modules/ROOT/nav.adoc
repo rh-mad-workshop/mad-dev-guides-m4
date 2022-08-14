@@ -1,1 +1,7 @@
-* xref:1-introduction.adoc[Introduction]
+* xref:introduction.adoc[Introduction]
+* xref:red-hat-account.adoc[Create a Red Hat Account]
+* xref:provision-cloud-services.adoc[Provision Red Hat OpenShift Application Services]
+* xref:design-apis.adoc[Design APIs with OpenShift Designer]
+* xref:service-registry.adoc[Host APIs in a Service Registry]
+* xref:mock-apis.adoc[Mock APIs]
+* xref:manage-apis-rhoam.adoc[Adding API Management capabilities]
