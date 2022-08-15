@@ -1,27 +1,21 @@
 
 = Adding API Management capabilities to the application
 
-In this part of the workshop you will use the  OpenShift API Management tenant that has been setup for you. +
-
-[IMPORTANT]
-====
-For the URL to access `OpenShift API Management`, please ask your instructor. 
-====
+In this part of the workshop you will use the OpenShift API Management tenant on the Developer Sandbox that you configured earlier in the lab.
 
 == Access Red Hat OpenShift API Management
-. In a browser window, navigate to the console of the OpenShift API Management tenant with the URL shared at the workshop by the instructor
-. Login with your username and password (`%user%/%user_password%`). 
-. You will see that a sample API which has been already set up.
+. Navigate to the browser tab pointing to the OpenShift API Management dashboard on Developer Sandbox. +
+If you closed the browser tab, refer to the instructions in the _Provision Red Hat OpenShift Application Services_ section.
+. Notice the sample API which has been already set up.
 +
 image::rhoam-landing-page.png[]
 
 
 == Create an API Product
 
-A product is a customer-facing API that packages one or more backends. You will create an API  Product manually with the following instructions
+A product is a customer-facing API that packages one or more backends. You will create an API Product manually with the following instructions:
 
-. In a browser window navigate to the Red Hat OpenShift API Management
-. In the Dashboard, under the APIs section, click *Create Product* in the *_Products_* card.
+. In the Dashboard, under the APIs section, click *Create Product* in the *Products* card.
 +
 image::rhoam-dashboard.png[Red Hat OpenShift API Management Dashboard]
 
@@ -39,13 +33,13 @@ image::rhoam-create-product.png[width=100%]
 |========================================================================
 
 . Click *Create Product*.
-. A Product `globex-product-catalog` is created and you are taken to the Product Overview page
+. A Product `globex-product-catalog` is created and you are taken to the *Product Overview* page.
 +
 image:rhoam-create-product-overview.png[]
 
 == Create an API Backend
-. Navigate back to the Dashboard. Click `Create Backend` in the *_Backends_* card found in the APIs section.
-. Provide the following details.
+. Navigate back to the Dashboard. Click *Create Backend* in the *Backends* card found in the APIs section.
+. Provide the following details:
 +
 image::rhoam-create-backend.png[]
 +
@@ -65,23 +59,22 @@ image::rhoam-create-backend.png[]
 ** Click on the `*catalog icon*` to see the deployment details appear on the right hand side.
 +
 image::rhoam-globex-deployment-topology-catalog-service.png[]
-** Under the `Resources` tab, copy the `Location` URL as present at the bottom of this under `Routes`. This would look something like this `%catalog_service_url%`
-* You will use this base URL as  the `Private endpoint` while creating the Backend
+** Under the *Resources* tab, copy the *Location* URL as present at the bottom under *Routes*. This would look something like this: `%catalog_service_url%`
+* You will use this base URL as the *Private endpoint* while creating the Backend.
 ====
 
 . Click *Create Backend*
-. The Backend overview page is presented 
+. The *Backend overview* page is presented:
 +
 image::rhoam-backend-overview.png[]
 
-
-== Add  Backend to Product
-. Click on the selector option right next to the logo and choose `Products`
-. Choose the Product `*globex-product-catalog*` product from the list of products. 
-. Navigate to  *Integration > Backend* from the left-hand menu.
+== Add Backend to Product
+. Click on the selector option at the top of the window and choose *Products*.
+. Choose the `*globex-product-catalog*` product from the list of products. 
+. Navigate to *Integration > Backend* from the left-hand menu.
 +
 image::rhoam-backend-landing.png[]
-. Click on *Add Backend*, choose `globex-catalog-backend` from the dropdown, and click the *Add to Product* button
+. Click on *Add Backend*, choose `globex-catalog-backend` from the dropdown, and click the *Add to Product* button.
 +
 image::rhoam-add-backend-to-product.png[width=100%]
 . You will see the new Backend `globex-catalog-backend` being listed now.
@@ -91,7 +84,7 @@ image::rhoam-add-backend-to-product-success.png[]
 == Create an application plan to define a customer-facing API product
 
 . Navigate to the `globex-product-catalog` Product again if necessary.
-. In `Applications > Application Plans` menu on the left hand side, click on *Create Application Plan*
+. In the *Applications > Application Plans* menu on the left hand side, click on *Create Application Plan*.
 +
 image:rhoam-create-app-plan-list.png[]
 . Provide the following details:
@@ -108,10 +101,10 @@ image::rhoam-create-app-plan.png[]
 
 
 . Click *Create Application Plan*.
-. The application plan will be created and listed now. Click on the `*Publish*` option from the kebab menu displayed as shown in the screenshot.
+. The application plan will be created and listed now. Click on the *Publish* option from the kebab menu displayed as shown in the screenshot.
 +
 image::rhoam-create-app-plan-success.png[]
-. The state of the application plan will now be displayed as `published`
+. The state of the application plan will now be displayed as `published`.
 +
 image::rhoam-create-app-plan-published.png[]
 
@@ -123,16 +116,17 @@ image::rhoam-create-app-plan-published.png[]
 An application is always associated with an application plan. Applications are stored within developer accounts.
 ====
 
-. Navigate to `Audience > Accounts > Listing` from the dropdown menu near top-left of the page.
-. For the purpose of this labs, you will use the default `Developer` account that has already been created.
+. Click on the selector option at the top of the window and choose *Audience*.
+. Navigate to *Accounts > Listing* from the left side menu.
+. For the purpose of this lab, you will use the default `Developer` account that has already been created.
 +
 image::rhoam-developer-account.png[]
-. Click on the `+++<u>1 Application</u>+++` link on the top of the page to navigate to the  *Application tab* of this account.
+. Click on the `+++<u>1 Application</u>+++` link on the top of the page to navigate to the *Application tab* of this account.
 +
 image::rhoam-audience-add-app.png[]
 . You will see the list of applications associated to this user. Note that there is already the default application which has been associated with this user. 
-. Click `*Create Application*`. You will view the `*New Application*` page
-. Choose the following details in the `New Application` page:
+. Click *Create Application*. You will view the *New Application* page.
+. Choose the following details in the *New Application* page:
 +
 image::rhoam-create-app.png[]
 +
@@ -146,17 +140,17 @@ image::rhoam-create-app.png[]
 | Description       | `Globex Product Catalog Developer App`
 |==========================================
 
-. Click `*Create Application*` button.
-. You can see your new application details now
+. Click the *Create Application* button.
+. You can see your new application details now:
 +
 image::rhoam-create-app-success.png[]
-. Make a note of the `User Key` that is displayed under the `API Credentials` section. This will be used while making calls to the API.
+. Make a note of the `User Key` that is displayed under the *API Credentials* section. This will be used while making calls to the API.
 
 
 == Test integration of the API
 
-. Navigate to the Product > *globex-product-catalog* > `Integration` > `Configuration`
-. Under *APIcast Configuration*, click `*Promote to Staging APIcast*` to promote the new APIcast configuration to staging.
+. Navigate to *Product* > *globex-product-catalog* > *Integration* > *Configuration*
+. Under *APIcast Configuration*, click *Promote to Staging APIcast* to promote the new APIcast configuration to staging.
 +
 image::rhoam-promote-staging.png[]
 
@@ -165,17 +159,12 @@ image::rhoam-promote-staging.png[]
 image::rhoam-curl-test-api.png[]
 . Include the path `services/products` in the URL so that it looks like this
 `https://globex-product-catalog-jaya-rhoam101-apicast-staging.apps.rhoam-ds-prod.xe9u.p1.openshiftapps.com:443/services/products?user_key=5f378fb68add26d7c9a17a0d725f9afa`
-. Paste the URL in the address field of a browser tab and press enter
-. You will see the response JSON being displayed 
+. Paste the URL in the address field of a browser tab and press `enter`.
+. You will see the response JSON being displayed:
 +
 image::rhoam-final-response.png[]
-** To check if the API Management is actually securing the API, try altering the api_key's value in the URL. You will receive an  `Authentication failed` error
-. Back in the API Mangement portal, Click on the *Analytics -> Traffic* link on the left hand side menu for the `globex-product-catalog` product. You will see the Hits details. This section provides insights in terms of the number hits for the product and other traffic analysis details as well.
+** To check if the API Management is actually securing the API, try altering the api_key's value in the URL. You will receive an `Authentication failed` error.
+. Back in the API Mangement portal, Click on the *Analytics -> Traffic* link on the left hand side menu for the `globex-product-catalog` product. You will see the *Hits* details. This section provides insights in terms of the number hits for the product and other traffic analysis details as well.
 +
 image::rhoam-api-traffic.png[]
-
-[NOTE]
-====
-This OpenShift API Management tenant is setup specifically for this workshop. If you would like to try it out later you can use the http://red.ht/rhoam-sandbox[OpenShift API Management Developer Sandbox,role=external,window=_blank] for a free trial acccount
-====
  

@@ -7,7 +7,7 @@ As part of the API-First approach, the first step  - of course - is to design th
 
 In this section you will import an existing API that will be used as a starting point, explore the designer while making a few minor edits and then export this to a Service Registry
 
-API Designer is under `Service preview` and can be accessed through the Red Hat Hybrid Cloud Console via this https://console.redhat.com/beta/application-services/api-designer[API Designer,role=external,window=_blank]
+API Designer is under `Service preview` and can be accessed through the Red Hat Hybrid Cloud Console via https://console.redhat.com/beta/application-services/api-designer[API Designer,role=external,window=_blank]
 
 [NOTE]
 ====
@@ -16,12 +16,12 @@ OpenShift API Designer is in Beta and all your designs are stored locally in you
 
 == Import API 
 
-. Navigate to https://console.redhat.com/beta/application-services/api-designer[OpenShift API Designer,role=external,window=_blank] and  login using your Red Hat account
-. In the landing page, click on the "Import design" buton and choose `"Import from URL"` option.
+. Navigate to https://console.redhat.com/beta/application-services/api-designer[OpenShift API Designer,role=external,window=_blank] and if needed login using your Red Hat account.
+. On the landing page, click on the *Import design* button and choose the *Import from URL* option.
 +
 image::api-designer-import-url.png[]
 
-. Paste the following URL into the URL field and click on the button *Fetch*. 
+. Paste the following URL into the URL field and click on the *Fetch* button. 
 +
 [.console-input]
 [source,bash]
@@ -31,11 +31,11 @@ https://raw.githubusercontent.com/cloud-services-summit-connect-2022/product-cat
 +
 image::api-designer-import-url-popup.png[]
 
-. Observe  the fields that are populated with the data from the imported API specifications. Click on *Import* button to import the specs into the API Designer
+. Observe  the fields that are populated with the data from the imported API specifications. Click on the *Import* button to import the specs into the API Designer
 +
 image::api-designer-api-data.png[]
 
-. You can now view  the `Product Catalog API` on the broswer. You can explore the Paths, Data Types and Responses that are part  of this API.
+. You can now view  the `Product Catalog API` on the browser. You can explore the Paths, Data Types and Responses that are part of this API.
 +
 image::api-designer-api-import-complete.png[]
 
@@ -77,8 +77,8 @@ image::api-designer-export-actions.png[]
 +
 image::api-designer-export-2-osr.png[]
 
-. A success message will appear on the top right of the screen notifiying that the API export is  successful
+. A success message will appear on the top right of the screen notifiying that the API export is successful.
 +
 image::api-designer-api-export-complete.png[]
 
-In the next step you will explore the OpenShift Service Registry.
+In the next section you will explore the OpenShift Service Registry.

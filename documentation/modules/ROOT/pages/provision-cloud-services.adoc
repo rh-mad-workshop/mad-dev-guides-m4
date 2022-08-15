@@ -4,7 +4,7 @@
 
 Red Hat OpenShift Application Services is a growing collection of managed cloud services which provide a streamlined developer experience for building and deploying event streams based applications, design and manage API specifications and schemas, and manage and secure APIs.
 
-As part of this workshop you provision and use the following Red Hat Application Services:
+As part of this workshop you provision and use the following Red Hat OpenShift Application Services:
 
 * OpenShift Streams for Apache Kafka
 * OpenShift Connectors
@@ -12,44 +12,73 @@ As part of this workshop you provision and use the following Red Hat Application
 * OpenShift API Designer
 * OpenShift API Management
 
-== Provision a Streams for Apache Kafka instance
+This module of the workshop uses OpenShift API Designer, OpenShift Service Registry and OpenShift API Management.
 
-In this step you provision a Streams for Apache Kafka instance which will be used to produce a stream of activity tracking events and for the records produced by users placing an order.
+== Setup Developer sandbox for Red Hat OpenShift API Management (RHOAM)
 
-Red Hat OpenShift Application Services are provisioned and managed through the Red Hat Hybrid Cloud Console at link:https://console.redhat.com[console.redhat.com,role=external,window=_blank] or with the `rhoas` CLI. This workshop uses the Hybrid Console.
+The Red Hat OpenShift API Management Service is a fully Red Hat managed API traffic control and API program management solution that includes analytics, access control, developer workflows, and more. It is based on the Red Hat 3scale API Management platform.
+
+Red Hat OpenShift API Management (RHOAM) is available as an add-on on OpenShift Dedicated cluster on AWS, or on Red Hat OpenShift Service on AWS (ROSA).
+
+In this workshop, you will use the Red Hat OpenShift API Management Developer Sandbox, which is a trial environment for RHOAM, which provides you with a free 30-day trial environment allowing you to explore the benefits of the fully managed service.
+
+In this section of the lab, you will register for the RHOAM Developer Sandbox, and create a RHOAM tenant for you to use.
+
+. Register for a RHOAM sandbox by clicking on the red *Launch your RHOAM OpenShift Developer Sandbox* button on the https://red.ht/rhoam-sandbox[Developer Sandbox use case activities page,role=external,window=_blank]. You are redirected to a login page. Login with the Red Hat account that you created in the previous step.
+. You are redirected back to the Developer Sandbox use case activities page. To prevent the creation of fraudulent accounts, your sandbox account needs to be validated with a phone verification step.
++
+image::rhoam-sandbox-phone-verification.png[]
+
+. Once you enter the code received on your phone, your RHOAM sandbox will be ready to use. Click the *Start using your RHOAM sandbox* button.
+. You are redirected to the Developer Sandbox login screen. Click the *DevSandbox* button to log into your OpenShift Sandbox.
++
+image::rhoam-sandbox-login.png[]
+. If this is the first time you use the Red Hat account on the Developer Sandbox, you are redirected to a Terms and Conditions page. Check the *I have read and agree to all the terms and conditions below* check box. Feel free to uncheck the *I would like to receive...* check boxes if you want to opt out from receiving marketing emails. Click *Submit*.
+. The final step in the registration process is an email verification step. An email is sent to the email address attached to your Red Hat account, with a verification link. Access your email, open the email (the subject is `Verify email for Red Hat account` ), and copy the verification link.
++
+image::rhoam-sandbox-verification-email.png[]
+. Go back to the browser tab which is open on the Developer Sandbox email verification page, and paste the link in the browser address bar. You are now redirected to the Developer perspective of your Developer Sandbox.
++
+image::rhoam-sandbox-developer-perspective.png[]
+. Execute the following steps to setup a RHOAM tenant.
+* From the *Projects* dropdown on the top of the page, set the project namespace as *<username>-dev* from the projects that have been already created for you.
+* Click on *Search* from the left navigation
+* Click on *Resources* to search for `APIManagementTenant` and select it. 
++
+image::tenant-search.png[width=100%]
+* Select the *Create APIManagementTenant* button
++
+image::create-APIManagementTenant.png[width=100%]
+* You are taken to the YAML configuration of this resource. Click the *Create* button at the bottom of the YAML displayed.
+* You are taken to the Details page of this resource. Click on the *YAML* tab to view the changes to the YAML configuration.
+* Watch for changes to the YAML of the APIManagementTenant resource, and wait for the status to be displayed at the bottom of the YAML to become `status.provisioningStatus: 3scale account ready`
++
+image::api-tenant-deployed.png[width=100%]
++
+The API Management Tenant account is now provisioned and is ready for use. 
+This may take a couple of minutes. 
+* To access OpenShift API Management, select *Project* from the menu on the left, and in the *Launcher* pane on the right side, select *API Management*.
++
+image::launcher-pane.png[width=100%]
+* Choose to *Authenticate through <> Red Hat Single Sign-On*, and  login using the identity provider that applies to you, e.g *DevSandbox*.
++
+image::sso-login.png[width=100%] 
+image::devsandbox-login.png[width=100%] 
+* You are redirected to the Dashboard of your RHOAM tenant. Leave the browser tab open, as you will have to come back to it later in the workshop.
++
+image::rhoam-sandbox-tenant-dashboard.png[]
+
+== Provision a Service Registry instance
+
+In this step you provision a Service Registry instance on the Red Hat Hybrid Cloud Console. The Service Registry instance will be used in this workshop to store OpenAPI spec documents.
 
 . Navigate to https://console.redhat.com[console.redhat.com,role=external,window=_blank] and log in with your Red Hat account credentials.
 +
 [NOTE]
 ====
-If you created a new Red Hat account as explained in the previous step, you should already be logged in into the Hybrid Cloud Console.
-You will need to accept another set of terms and conditions in order to create a Streams for Apache Kafka instance.
+If you created a new Red Hat account as explained in the previous section, you should already be logged in into the Hybrid Cloud Console.
+You will need to accept another set of terms and conditions in order to create a Service Registry instance.
 ====
-
-. On the https://console.redhat.com[console.redhat.com] landing page, select *Application and Data Services* from the menu on the left.
-
-. On the Application Services landing page, select *Streams for Apache Kafka → Kafka Instances*.
-+
-image::console-redhat-com-kafka-instances.png[]
-
-. On the *Kafka Instances* overview page, click the *Create Kafka instance* button. Enter `globex` as the name of the instance and select the relevant _Cloud region_ for your Kafka instance and click *Create instance*. This starts the provisioning process for your Kafka instance.
-+
-[NOTE]
-====
-This will create a evaluation Kafka instance, which will remain available for 48 hrs. The Kafka instance comes with some limitations, which are listed in the *Create instance* window. The eval Kafka instance consists of a single broker, while production Kafka brokers have a minimum of 3 brokers. 
-====
-
-. The new Kafka instance is listed in the instances table. After a couple of minutes, your instance should be marked as ready. 
-+
-image::console-redhat-com-kafka-instance-ready.png[]
-
-. When the instance _Status_ is `Ready`, you can start using the Kafka instance. You can use the options icon (three vertical dots) to view, connect to, or delete the instance as needed.
-
-Normally, when using Streams for Apache Kafka, the next steps would be to create a service account and set up the Access Control List for that service account. However, when using Service Binding to connect applications to the Kafka instance, a service account is created as part of the binding. Once the service account is created, you will need to setup the required permissions for that service account. An alternative is to set up wildcard permissions (valid for all service accounts), but this is generally considered less secure.  
-
-== Provision a Service Registry instance
-
-In this step you provision a Service Registry instance. The Service Registry instance will be used in this workshop to store OpenAPI spec documents.
 
 . On the https://console.redhat.com[console.redhat.com] landing page, select *Application and Data Services* from the menu on the left.
 

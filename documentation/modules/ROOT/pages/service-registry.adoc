@@ -1,60 +1,60 @@
 = Red Hat OpenShift Service Registry
 
-OpenShift Service Registry is a datastore for sharing standard event schemas and API designs across event-driven and API architectures. In this section you will explore and learn about this managed service hosted on http://console.redhat.com[Red Hat Hybrid Cloud Console, role=external,window=_blank]
+OpenShift Service Registry is a datastore for sharing standard event schemas and API designs across event-driven and API architectures. In this section you will explore and learn about this managed service hosted on the http://console.redhat.com[Red Hat Hybrid Cloud Console, role=external,window=_blank]
 
 == Discover Red Hat OpenShift Service Registry
 
 . If not already open, navigate to the https://console.redhat.com/beta/application-services/service-registry[Service Registry] from the browser. If necessary, login with your Red Hat account that you are using for this workshop.
 
-. You will see a listing of all Service Registry instances. In this labs, you will use the Service Registry instance  `globex` that you created in a previous step. 
-
+. You will see a listing of all Service Registry instances. In this lab, you will use the Service Registry instance `globex` that you created in a previous step. 
 +
 image::osr_landing_page.png[]
 
-. Click on the registry  `globex` to view the artifacts. You will see the schema  `globex / Product Catalog API (ProductCatalogAPI)` that you exported from the `API Designer` in the previous section of the labs.
+. Click on the registry `globex` to view the artifacts. You will see the schema `globex / Product Catalog API (ProductCatalogAPI)` that you exported from the `API Designer` in the previous section of the lab.
 +
 image::osr_artifacts.png[]
 
-. Click on the `Product Catalog API` to  view the details of the ProductCatalogAPI schema. This overview page provides details about this registry. You will find details about the schema on this page. 
+. Click on the `Product Catalog API` to view the details of the ProductCatalogAPI schema. This overview page provides details about the schema. 
 +
 image::osr-api-overview.png[]
-. Click on the  `Documentation` tab to view the OpenAPI specifications 
-. Click on the  `Content` tab to view the schema in JSON format
+. Click on the *Documentation* tab to view the OpenAPI specifications 
+. Click on the *Content* tab to view the schema in JSON format
 
 == Enabling Content Rules for format validity
-. Navigate  back to the `Overview` tab.
+. Navigate back to the *Overview* tab.
 
-. Observe the `Content rules` section which provides options to validate the schema and  enforce compatibility while the artifact is updated
+. Observe the *Content rules* section which provides options to validate the schema and enforce compatibility while the artifact is updated.
 +
 image::osr-api-content-rules.png[] 
 
-. Click on `Enable` button against the  "Validity Rule" and choose `Full` from the dropdown. This rules ensures that the content is valid when the artifact is updated.
+. Click on *Enable* button for *Validity rule* and choose *Full* from the dropdown. This rule ensures that the content is valid when the artifact is updated.
 +
 image::osr-content-rules.png[]
 
-. Click on the `*Content*` tab. Copy the entire content of the artifact shown in this tab (into the memory by Ctrl+A and Ctrl+C)
+. Click on the *Content* tab. Copy the entire content of the artifact shown in this tab into the memory with `Ctrl+A` and `Ctrl+C`.
 +
 image::osr-view-content.png[]
 
-. Click on the `*Upload new version*` button on the top-right of the page
+. Click on the *Upload new version* button on the top-right of the page.
 +
 image::osr-upload-new-popup.png[] 
 
-. Paste the content of the schema that you copied in the previous steps into the textbox provided (Ctrl+V). 
+. Paste the content of the schema that you copied in the previous steps into the textbox provided with `Ctrl+V`. 
 
-. Delete the closing `}` at the bottom of the text box and  click `Upload`
-* *The original content*
+. Delete the closing `}` at the bottom of the text box and click *Upload*.
++
+* The original content:
 +
 image::osr-original-api-content.png[] 
-* *After introducing an error*
+* After introducing an error:
 +
 image::osr-edit-schema-with-error.png[]
 
-. You will observe an `*Invalid Content Error*` stating that one of the content rules has been violated, displays details of the error. The artifact Content is not updated.
+. You will observe an `*Invalid Content Error*` stating that one of the content rules has been violated, and displaying details of the error. The artifact Content is not updated.
 +
 image::osr-error.png[]
 
-. Click on `Close` to dismiss error
+. Click on `Close` to dismiss the error.
 
 [NOTE]
 ====
@@ -65,4 +65,3 @@ OpenShift Service Registry also provides full integration with Red Hat OpenShift
 ====
 
 In the next step you will explore the use of the ProductCatalogAPI specification to setup mocks.
-
