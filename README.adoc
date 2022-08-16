@@ -7,38 +7,28 @@
 ## Overview
 
 |===
-|| 
-
-|Audience Experience Level
-|Beginner
-
-|Average Time to Complete	
-|60 minutes
+|Audience Experience Level |Beginner
+|Average Time to Complete	 |60 minutes
 |===
 
-This workshop aims to showcase how to modernize applications for solving the challenges faced by existing applications in the current landscape as below:
-
-* **Integration**: Challenging to leverage new cloud based services
-* **Scalability**: Not able to meet web scale due to data-centric architecture
-* **Reliability**: Unable to quickly deploy new capabilities
-* **Developer productivity and Business Agility**: Often low in comparison to cloud native applications
-
-Take a look at the link:https://www.konveyor.io/modernization-report/[Konveyor Community’s Application Modernization Report for 2022] to understand how users and organizations define application modernization as well as top reasons for modernization.
-
-image::app-mod-report-2022.png[app-mod-report-2022]
+This workshop aims to showcase how to enhance applications with API management and event streaming technologies.
 
 ## Key Takeaways
 
-* Modernization has a broad spectrum of definitions, but containerizing and automation rank high. 
-* The containerizing is a broad enough trend to encompass multiple strategies including refactoring with Microservices. 
-* Increasing scalability and reliability are key reasons for modernization.
+* The introduction of a streaming platform (Apache Kafka) to generate a stream of user activity events from the application web UI. 
+* The introduction of an API Management solution (Red Hat OpenShift API management) to expose, secure and manage the APIs to the application backend services. 
+* API First approach to design, host schema, mock APIs to  allows parallel streams of development between API implementers and API consumers.
 
 ## Technology Stack
 
-* Red Hat Enterprise Virtualization
-* Red Hat Application Runtimes (Quarkus, Spring Boot, Node.js, Tomcat)
-* Red Hat OpenShift (Pipeline, GitOps, Virtualization)
-* Oracle Database and PostgreSQL
+* Red Hat OpenShift API Management
+* Red Hat OpenShift Streams for Apache Kafka
+* Red Hat build of Quarkus
+* OpenShift API Designer
+* OpenShift API Service Registry
+* OpenShift Connectors
+* Microcks/Postman
+* Quay
 
 ## Documentation
 
@@ -58,28 +48,29 @@ Here's the list of all query params used (they are all optional, but generated l
 |PARAM
 |Description
 
-|`CLUSTER_SUBDOMAIN`
+|`USERID`
+| The username of your OpenShift cluster
+
+|`SUBDOMAIN`
 |The subdomain for your OpenShift cluster in the form `apps.<cluster_name>.<base_domain>`, e.g. `apps.openshift.mydomain.tld`
 
-|`USERNAME`
-| The username of your OpenShift cluster
 
 |===
 
 Example [Dev Mode]:
 
-http://localhost:3000/mad-dev-guides-m1/main/1-introduction.html?USERID=user1&SUBDOMAIN=cluster-8s5ss.sandbox701.opentlc.com&tomcatIP=150.240.99.53
+http://localhost:3000/mad-dev-guides-m4/main/appendix.html?USERID=user1&SUBDOMAIN=cluster-sdfd.sdfsf.sandbox1043.opentlc.com
 
 ## Deploy to OpenShift
 
 [.console-input]
 [source,bash]
 ----
-oc new-app  https://github.com/RedHat-Middleware-Workshops/mad-dev-guides-m1.git --strategy=docker
+oc new-app  https://github.com/RedHat-Middleware-Workshops/mad-dev-guides-m4.git --strategy=docker
 
-oc expose deploy mad-dev-guides-m1 --port 3000
+oc expose deploy mad-dev-guides-m4 --port 3000
 
-oc create route edge mad-dev-guides-m1 --service=mad-dev-guides-m1
+oc create route edge mad-dev-guides-m4 --service=mad-dev-guides-m4
 ----
 
 ## Contributing

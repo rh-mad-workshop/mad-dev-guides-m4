@@ -1,10 +1,15 @@
-= Red Hat OpenShift Service Registry
+:imagesdir: ../assets/images
+= Publish, discover, and reuse artifacts with OpenShift Service Registry
 
-OpenShift Service Registry is a datastore for sharing standard event schemas and API designs across event-driven and API architectures. In this section you will explore and learn about this managed service hosted on the http://console.redhat.com[Red Hat Hybrid Cloud Console, role=external,window=_blank]
+https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-service-registry[OpenShift Service Registry,role=external,window=_blank] is a datastore for sharing standard event schemas and API designs across event-driven and API architectures. 
 
-== Discover Red Hat OpenShift Service Registry
+== Goals of this lab
+* In this section you will explore and learn about Service Registry
+* Enable Content Rules to test OpenAPI format validity
 
-. If not already open, navigate to the https://console.redhat.com/beta/application-services/service-registry[Service Registry] from the browser. If necessary, login with your Red Hat account that you are using for this workshop.
+== Explore Red Hat OpenShift Service Registry
+
+. If not already open, navigate to the https://console.redhat.com/beta/application-services/service-registry[Service Registry,role=external,window=_blank] from the browser. If necessary, login with your Red Hat account that you are using for this workshop.
 
 . You will see a listing of all Service Registry instances. In this lab, you will use the Service Registry instance `globex` that you created in a previous step. 
 +

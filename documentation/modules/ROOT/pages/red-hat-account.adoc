@@ -1,4 +1,5 @@
 :icons: font
+:imagesdir: ../assets/images
 
 = Create a Red Hat Account
 

@@ -1,13 +1,18 @@
+:imagesdir: ../assets/images
+
 = Setting up mocks to help with parallel development
 
 Now that the OpenAPI specs are finalised, creation of API mocks will enable parallel development streams leading to rapid inner loop development. 
 
-* UI developers and other app dev teams (such as mobile dev) do not need to wait for the APIs to be completely developed and instead can use these mocks to get realistic responses. 
-
-* Backend developers in parallel build the backend applications APIs using modern cloud-native frameworks such as https://quarkus.io/[Quarkus]. They can test against the OpenAPI specs to ensure their implementation does not break the specifications. 
+* The various  dev teams (such as mobile dev) do not need to wait for the APIs to be completely developed and instead can use these mocks to get realistic responses. 
+* Backend developers in parallel build the backend applications APIs using modern cloud-native frameworks such as https://quarkus.io/[Quarkus]. 
 
 There are a number of ways to mock APIs including microcks, postman etc. In this labs you will use hosted Postman.
 
+== Goals of this lab
+* Setup Postman as a tool to mock the APIs using the OpenAPI schema
+* Import one of the APIs 
+* Test the imported API using the mock server and look for the change made to one of the examples in the API Designer
 
 == Setup Postman
 . Access Postman at https://www.postman.com/. Click on *Sign Up for Free*.

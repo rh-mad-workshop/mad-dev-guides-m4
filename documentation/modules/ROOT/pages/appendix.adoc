@@ -1,0 +1,18 @@
+:imagesdir: ../assets/images
+
+[private-endpoint]
+== How to fetch a Private endpoint of the Product Catalog service depoyed on OpenShift 
+
+* In a browser window, navigate to the console of the lab OpenShift cluster at link:https://console-openshift-console.apps.%SUBDOMAIN%/topology/ns/globex-%USERID%?view=graph[Topology view^,role=external,window=_blank]. 
+
+
+* Login with your username and password (`%USERID%/openshift`). Open the *Developer* perspective in the *globex-%USERID%* namespace.
+* Click on the `*catalog icon*` to see the deployment details appear on the right hand side.
++
+image::rhoam-globex-deployment-topology-catalog-service.png[]
+
+* Under the *Resources* tab, copy the *Location* URL as present at the bottom under *Routes*. This would look something like this: `https://catalog-globex-%USERID%.apps.%SUBDOMAIN%`
+* You will use this base URL as the *Private endpoint* while creating the Backend.
+
+[[<<manage-apis-rhoam.adoc#create-backend, go back>>]]
+

@@ -1,28 +1,22 @@
 :icons: font
+:imagesdir: ../assets/images
+= Provision Red Hat OpenShift application services
 
-= Provision Red Hat OpenShift Application Services
+== Goals of this lab
 
-Red Hat OpenShift Application Services is a growing collection of managed cloud services which provide a streamlined developer experience for building and deploying event streams based applications, design and manage API specifications and schemas, and manage and secure APIs.
+https://www.redhat.com/en/technologies/cloud-computing/openshift/application-services[Red Hat OpenShift Application Services,role=external,window=_blank] is a growing collection of managed cloud services which provide a streamlined developer experience to design and manage API specifications and schemas, manage and secure APIs, and build and deploy event streams based applications.
 
-As part of this workshop you provision and use the following Red Hat OpenShift Application Services:
-
-* OpenShift Streams for Apache Kafka
-* OpenShift Connectors
-* OpenShift Service Registry
-* OpenShift API Designer
-* OpenShift API Management
-
-This module of the workshop uses OpenShift API Designer, OpenShift Service Registry and OpenShift API Management.
-
-== Setup Developer sandbox for Red Hat OpenShift API Management (RHOAM)
-
-The Red Hat OpenShift API Management Service is a fully Red Hat managed API traffic control and API program management solution that includes analytics, access control, developer workflows, and more. It is based on the Red Hat 3scale API Management platform.
-
-Red Hat OpenShift API Management (RHOAM) is available as an add-on on OpenShift Dedicated cluster on AWS, or on Red Hat OpenShift Service on AWS (ROSA).
+Globex decides to use Red Hat OpenShift API Management which is a fully Red Hat managed API traffic control and API program management solution that includes analytics, access control, developer workflows, and more. 
 
 In this workshop, you will use the Red Hat OpenShift API Management Developer Sandbox, which is a trial environment for RHOAM, which provides you with a free 30-day trial environment allowing you to explore the benefits of the fully managed service.
 
-In this section of the lab, you will register for the RHOAM Developer Sandbox, and create a RHOAM tenant for you to use.
+In this section of the lab, you will 
+
+* Register for  RHOAM Developer Sandbox, and create a RHOAM tenant for you to use
+* Provision a Service Registry instance to host the API schemas
+
+
+== Register for a Developer sandbox for Red Hat OpenShift API Management (RHOAM)
 
 . Register for a RHOAM sandbox by clicking on the red *Launch your RHOAM OpenShift Developer Sandbox* button on the https://red.ht/rhoam-sandbox[Developer Sandbox use case activities page,role=external,window=_blank]. You are redirected to a login page. Login with the Red Hat account that you created in the previous step.
 . You are redirected back to the Developer Sandbox use case activities page. To prevent the creation of fraudulent accounts, your sandbox account needs to be validated with a phone verification step.
