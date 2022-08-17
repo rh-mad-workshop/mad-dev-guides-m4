@@ -2,11 +2,16 @@
 
 = Adding API Management capabilities to the application
 
-In this part of the workshop you will use the Red Hat OpenShift API Management (RHOAM) tenant on the Developer Sandbox that you configured earlier in the lab.
+== Introduction
+
+Once the backend teams fully develop the APIs backends, the APIs can be published for external consumption with an API management platform.  Globoex uses the Red Hat managed https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-api-management[Red Hat OpenShift API Management (RHOAM),role=external,window=product_page] for managing these APIs. The external teams such as mobile team will be able to user the built-in developer portal of RHOAM to sign up for various application plans. 
 
 == Goals of this lab
-* Setup a OpenShift API Management tenant on developer sandbox
-* Setup an API and manage it with OpenShift API Management
+In this part of the workshop you will 
+
+* Use the Red Hat OpenShift API Management (RHOAM) Developer Sandbox that you configured earlier in the lab. 
+* Import the already deployed Product Catalog API and manage it with OpenShift API Management
+* Test secure access of the API
 * View the traffic analytics generated
 
 == Access Red Hat OpenShift API Management

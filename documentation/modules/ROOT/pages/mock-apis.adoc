@@ -5,7 +5,7 @@
 Now that the OpenAPI specs are finalised, creation of API mocks will enable parallel development streams leading to rapid inner loop development. 
 
 * The various  dev teams (such as mobile dev) do not need to wait for the APIs to be completely developed and instead can use these mocks to get realistic responses. 
-* Backend developers in parallel build the backend applications APIs using modern cloud-native frameworks such as https://quarkus.io/[Quarkus]. 
+* Backend developers in parallel build the backend applications APIs using modern cloud-native frameworks such as https://quarkus.io/[Quarkus^, window=product-page]. 
 
 There are a number of ways to mock APIs including microcks, postman etc. In this labs you will use hosted Postman.
 
@@ -15,7 +15,7 @@ There are a number of ways to mock APIs including microcks, postman etc. In this
 * Test the imported API using the mock server and look for the change made to one of the examples in the API Designer
 
 == Setup Postman
-. Access Postman at https://www.postman.com/. Click on *Sign Up for Free*.
+. Access Postman at link:https://www.postman.com/[postman^, window=postman]. Click on *Sign Up for Free*.
 . You can now either create a new user or sign-up with Google. 
 +
 image::postman-signup.png[]
@@ -34,7 +34,7 @@ image::postman_landing.png[]
 image:postman-import-popup.png[width=60%]
 
 . The next step is to import the OpenAPI spec from Service Registry. 
-* Navigate to the https://console.redhat.com/beta/application-services/service-registry[Service Registry]. Login with your Red Hat account if necessary.
+* Navigate to the https://console.redhat.com/beta/application-services/service-registry[Service Registry^,window=service-registry]. Login with your Red Hat account if necessary.
 * Navigate to the `globex` instance and from there to `globex / ProductCatalogAPI`. 
 * You can either retrieve the specs as OpenAPI spec as (a) *raw text* or (b) *a file* and then import this into Postman.
 

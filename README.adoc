@@ -59,7 +59,7 @@ Here's the list of all query params used (they are all optional, but generated l
 
 Example [Dev Mode]:
 
-http://localhost:3000/mad-dev-guides-m4/main/appendix.html?USERID=user1&SUBDOMAIN=cluster-sdfd.sdfsf.sandbox1043.opentlc.com
+http://localhost:3000/mad-dev-guides-m4/main/introduction.html?USERID=user1&SUBDOMAIN=cluster-sdfd.sdfsf.sandbox1043.opentlc.com
 
 ## Deploy to OpenShift
 

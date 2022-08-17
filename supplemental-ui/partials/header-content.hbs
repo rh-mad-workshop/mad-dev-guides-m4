@@ -2,8 +2,6 @@
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () { 
       const urlParams = new URLSearchParams(window.location.search);
-
-      console.log("urlParams", urlParams)      
       const userId = urlParams.get('USERID');
       const subdomain = urlParams.get('SUBDOMAIN'); 
       if (userId) {
@@ -19,9 +17,7 @@
       document.getElementById('navbar-form-empty').style.display = "none";
       document.getElementById('navbar-form-filled').style.display = "flex";
       document.getElementById('username').textContent = userId;
-      document.getElementById('catalog_url').value = catalog_url; 
-      document.getElementById('openshift_console').value = openshift_console; 
-
+      document.getElementById('subdomain').value = subdomain; 
     }
 
     function showUserIdForm( subdomain ) {

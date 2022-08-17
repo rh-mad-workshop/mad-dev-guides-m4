@@ -1,7 +1,7 @@
 :imagesdir: ../assets/images
 = Publish, discover, and reuse artifacts with OpenShift Service Registry
 
-https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-service-registry[OpenShift Service Registry,role=external,window=_blank] is a datastore for sharing standard event schemas and API designs across event-driven and API architectures. 
+https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-service-registry[OpenShift Service Registry,role=external, window=product-page] is a datastore for sharing standard event schemas and API designs across event-driven and API architectures. 
 
 == Goals of this lab
 * In this section you will explore and learn about Service Registry
@@ -9,7 +9,7 @@ https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-servi
 
 == Explore Red Hat OpenShift Service Registry
 
-. If not already open, navigate to the https://console.redhat.com/beta/application-services/service-registry[Service Registry,role=external,window=_blank] from the browser. If necessary, login with your Red Hat account that you are using for this workshop.
+. If not already open, navigate to the https://console.redhat.com/beta/application-services/service-registry[Service Registry,role=external,window=service-registry] from the browser. If necessary, login with your Red Hat account that you are using for this workshop.
 
 . You will see a listing of all Service Registry instances. In this lab, you will use the Service Registry instance `globex` that you created in a previous step. 
 +
@@ -63,9 +63,9 @@ image::osr-error.png[]
 
 [NOTE]
 ====
-In real-life, the content rules are very helpful when APIs are used to manage Service Registry schema updates. To learn more about how to use manage the Service Registry content from the https://access.redhat.com/documentation/en-us/red_hat_openshift_service_registry[product page] under the `Manage Service Registry content` section.
+In real-life, the content rules are very helpful when APIs are used to manage Service Registry schema updates. To learn more about how to use manage the Service Registry content from the https://access.redhat.com/documentation/en-us/red_hat_openshift_service_registry[product page^, window=product-page] under the `Manage Service Registry content` section.
 
-OpenShift Service Registry also provides full integration with Red Hat OpenShift Streams for Apache Kafka to map your Kafka topics to the appropriate schemas. https://access.redhat.com/documentation/en-us/red_hat_openshift_streams_for_apache_kafka/1/guide/7d28aec8-e146-44db-a4a5-fafc1f426ca5#_af7a70bc-0a97-41c9-a06a-2a0287bd7119[Read more] about this
+OpenShift Service Registry also provides full integration with Red Hat OpenShift Streams for Apache Kafka to map your Kafka topics to the appropriate schemas. https://access.redhat.com/documentation/en-us/red_hat_openshift_streams_for_apache_kafka/1/guide/7d28aec8-e146-44db-a4a5-fafc1f426ca5#_af7a70bc-0a97-41c9-a06a-2a0287bd7119[Read more^, window=product-page] about this
 
 ====
 
