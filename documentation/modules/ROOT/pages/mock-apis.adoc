@@ -21,7 +21,7 @@ There are a number of ways to mock APIs including microcks, postman etc. In this
 image::postman-signup.png[]
  
 . You can provide your name and other details after signing in if prompted.
-. You will be prompted with a *How would you like to start* popup if this is the first time you are logging in. You can ignore this prompt.
+. You will be prompted with a *How would you like to start* popup if this is the first time you are logging in. You can ignore this prompt by using the <esc> key on your keyboard.
 
 . Navigate to the *Homepage*, locate the *Import an existing file* section and click on *Import file-->*.
 +
@@ -88,7 +88,7 @@ image::postman-mock-create-server.png[]
 image::postman-mock-server-url.png[]
 
 == Test the imported API using the mock server
-. Explore *Collections* menu from the left hand side, and you will be able to see the examples that have been already created while the API was designed.
+. Explore *Collections* menu from the left-hand side, and you will be able to see the examples that have been already created while the API was designed.
 . Click on the `Get list of product by id` from the `Product Catalog API`. This opens a tab on Postman which you can use to issue a request.
 +
 image::postman-choose-prodbyid.png[] 
@@ -98,4 +98,4 @@ image::postman-choose-prodbyid.png[]
 +
 image::postman-choose-prodbyid-response.png[]
 
-In the next step you will learn to protect the API by using Red Hat OpenShift API Management. 
+In the next step, you will learn to protect the API by using Red Hat OpenShift API Management. 

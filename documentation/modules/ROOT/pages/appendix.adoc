@@ -7,7 +7,7 @@
 
 
 * Login with your username and password (`%USERID%/openshift`). Open the *Developer* perspective in the *globex-%USERID%* namespace.
-* Click on the `*catalog icon*` to see the deployment details appear on the right hand side.
+* Click on the `*catalog icon*` to see the deployment details appear on the right-hand.
 +
 image::rhoam-globex-deployment-topology-catalog-service.png[]
 

@@ -9,7 +9,7 @@ A schematic overview of the current state of the application after the first pha
 
 image::globex-phase1.png[width=60%]
 
-Taking advantage of this new momentum, the business comes up with new requirements for the e-commerce application including a 
+Taking advantage of this new momentum, the business comes up with new requirements for the e-commerce application including 
 
 * Multi-channel approach which includes a mobile application in addition to the retail web-site. 
 * The ability to track user activity on various channels
@@ -35,7 +35,7 @@ In this module you will follow this journey:
 
 * *Design* an API resulting in an OpenAPI schema
 * Host this OpenAPI schema in a *registry* for use by various teams
-* *Mock* the APIs to eable faster inner loop development
+* *Mock* the APIs to enable faster inner loop development
 * *Manage and secure* APIs to allow access for external teams
 
 
@@ -49,3 +49,8 @@ image::globex-runtime-apim.png[width=100%]
 Here is a view of the deployment architecture. +
 
 image::globex-deployment-apim.png[]
+
+
+* The Inventory and Catalog services are deployed on Red Hat OpenShift running on the cloud
+* Red Hat OpenShift API Management is a Red Hat managed services running on OpenShift Dedicate
+* Red Hat OpenShift API Designer and Red Hat OpenShift Service Registry are running as fully managed and hosted services accessed through http://console.redhat.com[http://console.redhat.com^, window=redhatconsole]

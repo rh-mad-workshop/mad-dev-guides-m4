@@ -54,9 +54,12 @@ image::api-designer-sample-original.png[]
 . Replace the name of the first product by appending your name. I've changed this from `Quarkus T-shirt` to `Jaya's Awesome Quarkus T-shirt`
 +
 image::api-designer-sample-updated.png[]
-. Make sure you click  on the *Edit* button to save your edits.
+. Make sure you click  on the *Edit* button to confirm your edits.
 +
 image::api-designer-sample-edit-complete.png[]
+. Click on the *Save* button on the top-right corner to save your edits.
++
+image::api-designer-sample-edit-save.png[]
 
 
 == Export this API into the Service Registry
@@ -80,8 +83,8 @@ image::api-designer-export-actions.png[]
 +
 image::api-designer-export-2-osr.png[]
 
-. A success message will appear on the top right of the screen notifiying that the API export is successful.
+. A success message will appear on the top right of the screen notifying that the API export is successful.
 +
 image::api-designer-api-export-complete.png[]
 
-In the next section you will explore the OpenShift Service Registry.
+In the next section, you will explore the OpenShift Service Registry.

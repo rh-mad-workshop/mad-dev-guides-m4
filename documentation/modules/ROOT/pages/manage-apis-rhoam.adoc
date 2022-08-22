@@ -44,7 +44,7 @@ image::rhoam-create-product.png[width=100%]
 |========================================================================
 
 . Click *Create Product*.
-. A Product `globex-product-catalog` is created and you are taken to the *Product Overview* page.
+. A Product `globex-product-catalog` is created, and you are taken to the *Product Overview* page.
 +
 image:rhoam-create-product-overview.png[]
 
@@ -89,7 +89,7 @@ image::rhoam-add-backend-to-product-success.png[]
 == Create an application plan to define a customer-facing API product
 
 . Navigate to the `globex-product-catalog` Product again if necessary.
-. In the *Applications > Application Plans* menu on the left hand side, click on *Create Application Plan*.
+. In the *Applications > Application Plans* menu on the left-hand, click on *Create Application Plan*.
 +
 image:rhoam-create-app-plan-list.png[]
 . Provide the following details:
@@ -175,11 +175,11 @@ image::rhoam-final-response.png[]
 == View Traffic Analytics
 . Back in the API Mangement portal, Click on the *Analytics -> Traffic* link on the left hand side menu for the `globex-product-catalog` product. 
 . You will see the *Hits* details. 
-. This section provides insights in terms of the number hits for the product and other traffic analysis details as well.
+. This section provides insights in terms of the number of hits for the product and other traffic analysis details as well.
 +
 image::rhoam-api-traffic.png[]
  
 
 == Summary
 
-Congratulations! You have completed the *Manage and secure  APIs with OpenShift API Mananagement* module. In the next module, you will enhance the Globex application by adding Event Streaming capabilities.
+Congratulations! You have completed the *Manage and secure APIs with OpenShift API Mananagement* module. In the next module, you will enhance the Globex application by adding Event Streaming capabilities.
