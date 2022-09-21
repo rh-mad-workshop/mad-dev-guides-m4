@@ -62,7 +62,7 @@ image::rhoam-create-backend.png[]
 | Name              | `globex-catalog-backend`
 | System name       | `globex-catalog-backend`
 | Description       | `Backend for the Product Catalog  service`
-| Private endpoint  | `https://catalog-globex-%USERID%.apps.%SUBDOMAIN%`
+| Private endpoint  | `https://catalog-globex-%USERID%.%SUBDOMAIN%`
 |========================================================================
 
 +
