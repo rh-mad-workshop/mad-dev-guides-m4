@@ -63,14 +63,19 @@ image:postman-import-popup.png[]
 ** You can either drag the file into this window or clik on *Upload Files* to import the file downloaded from Service Registry
 ** You will be auto-navigated to the next step.
 
-. You will now see the API's name and a few other details populated in the *Import* wizard.
+. You will now see the API's name and a few other details populated in the *Import Elements* wizard.
+. Click on the `Show Import Settings` link as highlighted below
 +
 image::postman-import-populated.png[]
-`
+
+. Turn the `Copy collections to workspace` option `ON` as show in the below screenshot
++
+image::postman-import-choose-collection.png[]
+
 . Click on *Import*. 
 . You will be notified that import is complete. Click the *Close* button.
 . Explore the `Product Catalog API` that has been imported.
-* Note that the Collections and APIs are prepopulated
+* Note that the *Collections* and *APIs* sections are prepopulated
 
 == Setup Postman mock server
 . The next step is to setup a mock server on Postman which will then showcase how it can be useful for developers while the actual API backend is still under developement.
