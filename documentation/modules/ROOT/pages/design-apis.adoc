@@ -11,7 +11,7 @@ As part of the API-First approach, the first step  - of course - is to design th
 == Goals of this lab
 In this section you will import an existing API that will be used as a starting point, explore the designer while making a few minor edits and then export this to a Service Registry
 
-API Designer is under `Service preview` and can be accessed through the Red Hat Hybrid Cloud Console via https://console.redhat.com/beta/application-services/api-designer[API Designer^, window=api-designer]
+API Designer is under `Service preview` and can be accessed through the Red Hat Hybrid Cloud Console via https://console.redhat.com/application-services/api-designer[API Designer^, window=api-designer]
 
 *Note:* +
 OpenShift API Designer is in Beta and all your designs are stored locally in your browser. Clearing your browser cache or switching to a new browser might result in loss of data. Make sure you save your work by downloading your designs locally or by exporting them to a Red Hat OpenShift Service Registry instance.
@@ -19,7 +19,7 @@ OpenShift API Designer is in Beta and all your designs are stored locally in you
 
 == Import API 
 
-. Navigate to https://console.redhat.com/beta/application-services/api-designer[OpenShift API Designer^,window=api-designer] and if needed login using your Red Hat account.
+. Navigate to https://console.redhat.com/application-services/api-designer[OpenShift API Designer^,window=api-designer] and if needed login using your Red Hat account.
 . On the landing page, click on the *Import design* button and choose the *Import from URL* option.
 +
 image::api-designer-import-url.png[]
