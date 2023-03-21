@@ -12,7 +12,7 @@ In this workshop, you will use the Red Hat OpenShift API Management Developer Sa
 
 In this section of the lab, you will 
 
-* Register for  RHOAM Developer Sandbox, and create a RHOAM tenant for you to use
+* Register for  Red Hat OpenShift API Management Developer Sandbox
 * Provision a Service Registry instance to host the API schemas
 
 
@@ -34,31 +34,21 @@ image::rhoam-sandbox-verification-email.png[]
 . Go back to the browser tab which is open on the Developer Sandbox email verification page, and paste the link in the browser address bar. You are now redirected to the Developer perspective of your Developer Sandbox.
 +
 image::rhoam-sandbox-developer-perspective.png[]
-. Execute the following steps to setup a RHOAM tenant.
-* From the *Projects* dropdown on the top of the page, set the project namespace as *<username>-dev* from the projects that have been already created for you.
-* Click on *Search* from the left navigation
-* Click on *Resources* to search for `APIManagementTenant` and select it. 
+. An *OpenShift API Management tenant* has been preprovisioned for you within the *<username>-dev* namespace.
+. To launch OpenShift API Management, select *Project* from the menu on the left, and in the *Launcher* pane on the right side, select *API Management*.
 +
-image::tenant-search.png[width=100%]
-* Select the *Create APIManagementTenant* button
-+
-image::create-APIManagementTenant.png[width=100%]
-* You are taken to the YAML configuration of this resource. Click the *Create* button at the bottom of the YAML displayed.
-* You are taken to the Details page of this resource. Click on the *YAML* tab to view the changes to the YAML configuration.
-* Watch for changes to the YAML of the APIManagementTenant resource, and wait for the status to be displayed at the bottom of the YAML to become `status.provisioningStatus: 3scale account ready`
-+
-image::api-tenant-deployed.png[width=100%]
-+
-The API Management Tenant account is now provisioned and is ready for use. 
-This may take a couple of minutes. 
-* To access OpenShift API Management, select *Project* from the menu on the left, and in the *Launcher* pane on the right side, select *API Management*.
+[NOTE]
+====
+If you don’t see the link yet, please allow a few minutes before refreshing the page to access OpenShift API Management. Creation of this tenant takes a few minutes.
+====
+
 +
 image::launcher-pane.png[width=100%]
-* Choose to *Authenticate through <> Red Hat Single Sign-On*, and  login using the identity provider that applies to you, e.g *DevSandbox*.
+. Choose to *Authenticate through <> Red Hat Single Sign-On*, and  login using the identity provider that applies to you, e.g *DevSandbox*.
 +
 image::sso-login.png[width=100%] 
 image::devsandbox-login.png[width=100%] 
-* You are redirected to the Dashboard of your RHOAM tenant. Leave the browser tab open, as you will have to come back to it later in the workshop.
+. You are redirected to the Dashboard of your RHOAM tenant. Leave the browser tab open, as you will have to come back to it later in the workshop.
 +
 image::rhoam-sandbox-tenant-dashboard.png[]
 
