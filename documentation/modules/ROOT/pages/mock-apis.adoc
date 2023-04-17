@@ -20,62 +20,87 @@ There are a number of ways to mock APIs including microcks, postman etc. In this
 +
 image::postman-signup.png[]
  
-. You can provide your name and other details after signing in if prompted.
-. You will be prompted with a *How would you like to start* popup if this is the first time you are logging in. You can ignore this prompt by using the <esc> key on your keyboard.
+. You can provide your name and other details after signing in if prompted. You may choose the `Skip for now` button.
+. You will be prompted with a welcome screen asking   *How would you like to start?*  if this is the first time you are logging in. You can ignore this prompt by using the `_<esc>_` key on your keyboard.
 
-. Navigate to the *Homepage*, locate the *Import an existing file* section and click on *Import file-->*.
+. From the top navbar you can choose an alternate Workspace or choose to create a new one or you may remain in your current workspace.
 +
-image::postman_landing.png[] 
+image::choose-workspace.png[]
 
-== Import the ProductCatalogAPI
 
-. You will now see the *Import* wizard with multiple options.
+== Import the Product Catalog API
+
+. Click on the *Import* button as show in the screenshot below
 +
-image:postman-import-popup.png[width=60%]
+image::import-button-workspace.png[]
 
-. The next step is to import the OpenAPI spec from Service Registry. 
-* Navigate to the https://console.redhat.com/beta/application-services/service-registry[Service Registry^,window=service-registry]. Login with your Red Hat account if necessary.
-* Navigate to the `globex` instance and from there to `globex / ProductCatalogAPI`. 
-* You can either retrieve the specs as OpenAPI spec as (a) *raw text* or (b) *a file* and then import this into Postman.
-
-.. *If you are importing OpenAPI spec as raw text*
+. You will be presented with an import wizard popup
 +
-** In the Service Registry browser tab, click on the *Content* tab. Copy the specifications content shown in this page into the memory (`Ctrl-A` and `Ctrl-C`).
+image:postman-drag-file.png[width=60%]
+
+
+
+. The next step is to import the OpenAPI spec from Service Registry.  Navigate to the https://console.redhat.com/beta/application-services/service-registry[Service Registry^,window=service-registry]. Login with your Red Hat account if necessary.
+. Navigate to the `globex` instance and from there to `globex / ProductCatalogAPI`. 
+. You can retrieve OpenAPI spec through one of the following options and proceed to import the spec into Postman either as *Raw Text* or as *File import*. Both of these options are describe below. +
+
+.*Option 1: Import OpenAPI spec as raw text*
+[%collapsible]
+====
+* In the Service Registry browser tab, click on the *Content* tab. Copy the specifications content shown in this page into the memory (`Ctrl-A` and `Ctrl-C`).
 +
 image::osr-view-content.png[]
 
-** Navigate to the Postman window browser tab which is already open.
-** Click on the *Raw text* option of the *Import* popup and paste the content from the memory (`Ctrl-V`) into the text area.
-+
-image:postman-rawtext.png[]
-** Click on *Continue*. 
+* Navigate to the Postman window browser tab which is already open.
 
-.. *If you are importing OpenAPI spec as file*
+* Paste the copied content into the popup in the field as indicated below
 +
-** In the Service Registry browser tab, click on the *Documentation* tab. Click on the *Download* button. Make a note of where the file is downloaded on your laptop.
-+
-image:osr-documentation-download.png[]
+image::postman-paste-text.png[width=60%] 
 
-** Navigate back to the Postman window browser tab where you have *Import* wizard open.
-** Click on the *File* option of the *Import* wizard.
-+
-image:postman-import-popup.png[]
-** You can either drag the file into this window or clik on *Upload Files* to import the file downloaded from Service Registry
-** You will be auto-navigated to the next step.
+* You will be auto navigated to the next step.
+====
 
-. You will now see the API's name and a few other details populated in the *Import Elements* wizard.
-. Click on the `Show Import Settings` link as highlighted below
-+
-image::postman-import-populated.png[]
 
-. Turn the `Copy collections to workspace` option `ON` as show in the below screenshot
+.*Option 2: Import OpenAPI spec as file*
+[%collapsible]
+====
+* In the Service Registry browser tab, click on the *Documentation* tab. Click on the *Download* button. Make a note of where the file is downloaded on your laptop.
 +
-image::postman-import-choose-collection.png[]
+image::osr-documentation-download.png[]
+
+
+* Navigate back to the Postman window browser tab where you have the *Import* wizard open.
+
+* You can either drag the file into this window or the `select files or folders` options to import the file downloaded from Service Registry
++
+image:postman-drag-file.png[width=60%]
+
+* You will be auto-navigated to the next step.
+====
+
+[start=6]
+. Once you have successfully imported the OpenAPI specification, you will next be asked to *Choose how to import your API*. 
+. Choose the `OpenAPI 3.0 with a Postman Collection` option, and then choose to  *View Import Settings* link as highlighted below
+
++
+image::postman-how-to-import-api.png[width=60%]
+
+
+. Within the `Import Settings` wizard, for the *Parameter generation* dropdown  choose the value as `Example`. Click on the <- button to go back to the previous section
++
+image::postman-import-settings.png[width=60%]
+
 
 . Click on *Import*. 
-. You will be notified that import is complete. Click the *Close* button.
-. Explore the `Product Catalog API` that has been imported.
-* Note that the *Collections* and *APIs* sections are prepopulated
++
+image::postman-import-api.png[width=60%]
+
+. You will be notified that import is complete.
++
+image::postman-import-complete.png[width=60%]
+
+. Explore the `Product Catalog API` that has been imported that can be viewed under "Collections" section on the left hand navigation
+. Note that the *Collections* and *APIs* sections are prepopulated
 
 == Setup Postman mock server
 . The next step is to setup a mock server on Postman which will then showcase how it can be useful for developers while the actual API backend is still under developement.
@@ -88,6 +113,7 @@ image:postman-mock-chooseapi.png[]
 . Give the mock server a name, for example `ProductCatalog Mock Server` and click on *Create Mock Server* at the bottom of the page.
 +
 image::postman-mock-create-server.png[]
+
 . You will be shown details of the mock server URL. Make a note of the URL.
 +
 image::postman-mock-server-url.png[]
@@ -98,9 +124,14 @@ image::postman-mock-server-url.png[]
 +
 image::postman-choose-prodbyid.png[] 
 
-. Replace the `{{baseUrl}}` in the address field with the Mock server's URL, and click *Send*.
+. Replace the following parameters and click *Send*.
+** `{{baseUrl}}` in the address field with the Mock server's URL
+** `{{:ids}}` in the address field with `329299`
+
 . You can view the list of products in the bottom panel. Note that the name of the Quarkus T-shirt now says `Jaya's Awesome Quarkus T-shirt` (or the name you have for this product)
 +
 image::postman-choose-prodbyid-response.png[]
+
+. These mock end point of the  mock server can be used by the dev teams that are dependent on the APIs, to continue development in parallel without having to wait for the backend services to be fully developed, thereby accelerating time to market.
 
 In the next step, you will learn to protect the API by using Red Hat OpenShift API Management. 
