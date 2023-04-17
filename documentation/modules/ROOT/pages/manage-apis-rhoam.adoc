@@ -62,7 +62,7 @@ image::rhoam-create-backend.png[]
 | Name              | `globex-catalog-backend`
 | System name       | `globex-catalog-backend`
 | Description       | `Backend for the Product Catalog  service`
-| Private endpoint  | `https://catalog-globex-%USERID%.%SUBDOMAIN%`
+| Private endpoint  | `\https://catalog-globex-%USERID%.%SUBDOMAIN%`
 |========================================================================
 
 +
@@ -163,8 +163,8 @@ image::rhoam-promote-staging.png[]
 . To test requests to your API product, copy the URL provided along with the curl command in the *Example curl for testing* section. 
 +
 image::rhoam-curl-test-api.png[]
-. Include the path `services/products` in the URL so that it looks like this
-`https://globex-product-catalog-jaya-rhoam101-apicast-staging.apps.rhoam-ds-prod.xe9u.p1.openshiftapps.com:443/services/products?user_key=5f378fb68add26d7c9a17a0d725f9afa`
+. Include the path `services/products` in the URL so that it looks like this. 
+`\https://<replace with staging_url>/services/products?user_key=<replace with user_key from the previous section>`
 . Paste the URL in the address field of a browser tab and press `enter`.
 . You will see the response JSON being displayed:
 +
