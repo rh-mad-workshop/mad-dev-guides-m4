@@ -1,18 +1,18 @@
 :icons: font
 :imagesdir: ../assets/images
-= Provision Red Hat OpenShift application services
+= Provision Red Hat application services
 
 == Goals of this lab
 
-https://www.redhat.com/en/technologies/cloud-computing/openshift/application-services[Red Hat OpenShift Application Services,role=external,window=_blank] is a growing collection of managed cloud services which provide a streamlined developer experience to design and manage API specifications and schemas, manage and secure APIs, and build and deploy event streams based applications.
-
 Globex decides to use Red Hat OpenShift API Management which is a fully Red Hat managed API traffic control and API program management solution that includes analytics, access control, developer workflows, and more. 
 
-In this workshop, you will use the Red Hat OpenShift API Management Developer Sandbox, which is a trial environment for RHOAM, which provides you with a free 30-day trial environment allowing you to explore the benefits of the fully managed service.
+The API lifecycle tools such as API Designer and Service Registry provide a streamlined developer experience to design and manage API specifications and schemas, and manage and secure APIs for internal and external teams.
+
+In this workshop, you will use the Red Hat OpenShift API Management Developer Sandbox, which is a trial environment for RHOAM, which provides you with a free 30-day trial environment allowing you to explore the benefits of the API management platform.
 
 In this section of the lab, you will 
 
-* Register for  Red Hat OpenShift API Management Developer Sandbox
+* Register for Red Hat OpenShift API Management Developer Sandbox
 * Provision a Service Registry instance to host the API schemas
 
 
@@ -54,7 +54,7 @@ image::rhoam-sandbox-tenant-dashboard.png[]
 
 == Provision a Service Registry instance
 
-In this step you provision a Service Registry instance on the Red Hat Hybrid Cloud Console. The Service Registry instance will be used in this workshop to store OpenAPI spec documents.
+In this step you provision a Service Registry trial instance on the Red Hat Hybrid Cloud Console. The Service Registry instance will be used in this workshop to store OpenAPI spec documents.
 
 . Navigate to https://console.redhat.com[console.redhat.com,role=external,window=_blank] and log in with your Red Hat account credentials.
 +
