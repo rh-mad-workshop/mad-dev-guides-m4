@@ -182,4 +182,4 @@ image::rhoam-api-traffic.png[]
 
 == Summary
 
-Congratulations! You have completed the *Manage and secure APIs with OpenShift API Mananagement* module. In the next module, you will enhance the Globex application by adding Event Streaming capabilities.
+Congratulations! You have completed the *Manage and secure APIs with OpenShift API Mananagement* module. 

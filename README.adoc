@@ -15,18 +15,16 @@ This workshop aims to showcase how to enhance applications with API management a
 
 ## Key Takeaways
 
-* The introduction of a streaming platform (Apache Kafka) to generate a stream of user activity events from the application web UI. 
+
 * The introduction of an API Management solution (Red Hat OpenShift API management) to expose, secure and manage the APIs to the application backend services. 
 * API First approach to design, host schema, mock APIs to  allows parallel streams of development between API implementers and API consumers.
 
 ## Technology Stack
 
 * Red Hat OpenShift API Management
-* Red Hat OpenShift Streams for Apache Kafka
 * Red Hat build of Quarkus
-* OpenShift API Designer
-* OpenShift API Service Registry
-* OpenShift Connectors
+* Red Hat API Designer
+* Red Hat Service Registry
 * Microcks/Postman
 * Quay
 

@@ -1,24 +1,32 @@
 :icons: font
 :imagesdir: ../assets/images
-= Provision Red Hat OpenShift application services
+= Provision Red Hat application services
 
 == Goals of this lab
 
-https://www.redhat.com/en/technologies/cloud-computing/openshift/application-services[Red Hat OpenShift Application Services,role=external,window=_blank] is a growing collection of managed cloud services which provide a streamlined developer experience to design and manage API specifications and schemas, manage and secure APIs, and build and deploy event streams based applications.
-
 Globex decides to use Red Hat OpenShift API Management which is a fully Red Hat managed API traffic control and API program management solution that includes analytics, access control, developer workflows, and more. 
 
-In this workshop, you will use the Red Hat OpenShift API Management Developer Sandbox, which is a trial environment for RHOAM, which provides you with a free 30-day trial environment allowing you to explore the benefits of the fully managed service.
+The API lifecycle tools such as API Designer and Service Registry provide a streamlined developer experience to design and manage API specifications and schemas, and manage and secure APIs for internal and external teams.
+
+In this workshop, you will use the Red Hat OpenShift API Management Developer Sandbox, which is a trial environment for RHOAM, which provides you with a free 30-day trial environment allowing you to explore the benefits of the API management platform.
 
 In this section of the lab, you will 
 
-* Register for  Red Hat OpenShift API Management Developer Sandbox
+* Register for Red Hat OpenShift API Management Developer Sandbox
 * Provision a Service Registry instance to host the API schemas
 
 
 == Register for a Developer sandbox for Red Hat OpenShift API Management (RHOAM)
 
-. Register for a RHOAM sandbox by clicking on the red *Launch your RHOAM OpenShift Developer Sandbox* button on the https://red.ht/rhoam-sandbox[Developer Sandbox use case activities page,role=external,window=_blank]. You are redirected to a login page. Login with the Red Hat account that you created in the previous step.
+. Register for a RHOAM sandbox by clicking on the red *Launch your RHOAM OpenShift Developer Sandbox* button on the https://red.ht/rhoam-sandbox[Developer Sandbox use case activities page,role=external,window=_blank]. 
+. You are redirected to *Update Your Account* page. 
++
+image::rhoam-update-account.png[]
+* Update the details
+*** Account Type: Personal
+*** Provide your password again and enter other details
+. Click Submit 
+
 . You are redirected back to the Developer Sandbox use case activities page. To prevent the creation of fraudulent accounts, your sandbox account needs to be validated with a phone verification step.
 +
 image::rhoam-sandbox-phone-verification.png[]
@@ -28,13 +36,8 @@ image::rhoam-sandbox-phone-verification.png[]
 +
 image::rhoam-sandbox-login.png[]
 . If this is the first time you use the Red Hat account on the Developer Sandbox, you are redirected to a Terms and Conditions page. Check the *I have read and agree to all the terms and conditions below* check box. Feel free to uncheck the *I would like to receive...* check boxes if you want to opt out from receiving marketing emails. Click *Submit*.
-. The final step in the registration process is an email verification step. An email is sent to the email address attached to your Red Hat account, with a verification link. Access your email, open the email (the subject is `Verify email for Red Hat account` ), and copy the verification link.
-+
-image::rhoam-sandbox-verification-email.png[]
-. Go back to the browser tab which is open on the Developer Sandbox email verification page, and paste the link in the browser address bar. You are now redirected to the Developer perspective of your Developer Sandbox.
-+
-image::rhoam-sandbox-developer-perspective.png[]
 . An *OpenShift API Management tenant* has been preprovisioned for you within the *<username>-dev* namespace.
+** Note: The pre-provisioning process may take a few minutes.
 . To launch OpenShift API Management, select *Project* from the menu on the left, and in the *Launcher* pane on the right side, select *API Management*.
 +
 [NOTE]
@@ -54,22 +57,29 @@ image::rhoam-sandbox-tenant-dashboard.png[]
 
 == Provision a Service Registry instance
 
-In this step you provision a Service Registry instance on the Red Hat Hybrid Cloud Console. The Service Registry instance will be used in this workshop to store OpenAPI spec documents.
+In this step you provision a Service Registry trial instance on the Red Hat Hybrid Cloud Console. The Service Registry instance will be used in this workshop to store OpenAPI spec documents.
 
-. Navigate to https://console.redhat.com[console.redhat.com,role=external,window=_blank] and log in with your Red Hat account credentials.
+. Navigate to https://console.redhat.com/beta/application-services/service-registry[Service Registry,role=external,window=service-registry]. You may need to log in with your Red Hat account credentials if prompted.
 +
 [NOTE]
 ====
 If you created a new Red Hat account as explained in the previous section, you should already be logged in into the Hybrid Cloud Console.
 You will need to accept another set of terms and conditions in order to create a Service Registry instance.
 ====
-
-. On the https://console.redhat.com[console.redhat.com] landing page, select *Application and Data Services* from the menu on the left.
-
-. On the Application Services landing page, select *Service Registry → Service Registry Instances*.
+. Click on *Create  Service Registry* instance
 +
-image::console-redhat-com-service-registry-instances.png[]
-
+image::create-osr.png[width=60%]
+. You will be asked to sign up for Terms and Conditions.
+** Click on *View Terms and Conditions* button
++
+image::osr-tnc.png[]
+. Click on *I have read and agree to the terms.* and click on *Submit*
++
+image::osr-agree-tnc.png[]
+. You will be navigated back to the Hybrid Console Page. 
+//https://console.redhat.com/beta/application-services/service-registry?create=true&decision-1524=accepted&ackID=6072032079
+** Due to a known issue, this page would keep loading. So please close this browser tab if it allows you to. 
+. In a new browser tab, navigate to https://console.redhat.com/beta/application-services/service-registry[Service Registry,role=external,window=service-registry-new]. 
 . On the *Service Registry Instances* overview page, click the *Create Service Registry instance* button. Enter `globex` as the name of the instance and click *Create*. This starts the provisioning process for your Service Registry instance.
 
 . The new Service Registry instance is listed in the instances table. After a couple of seconds, your instance should be marked as ready. 
