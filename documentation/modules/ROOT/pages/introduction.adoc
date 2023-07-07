@@ -3,31 +3,14 @@
 
 == Globex's Digital Transformation Journey
 
-Globex, a fictitious retail company, has recently started a digital transformation and cloud adoption journey. As part of this initiative, the development and devops teams have completed the modernization of their existing retail e-commerce web application. 
-
-A schematic overview of the current state of the application after the first phase of the application modernization effort:
+Globex, a fictitious retail company, have completed the modernization of their existing retail e-commerce web application as part of their modernization journey. A schematic overview of the current state of the application as show below:
 
 image::globex-phase1.png[width=60%]
 
-Taking advantage of this new momentum, the business comes up with new requirements for the e-commerce application including 
+As a next step Globex would like to expand business with a *multi-channel retailing strategy* through a mobile app and partner channels. This means that the new channels will need access to their core backend API services. 
 
-* Multi-channel approach which includes a mobile application in addition to the retail web-site. 
-* The ability to track user activity on various channels
-* Highlight products which generate most customer interest as featured products.
+To secure the access to Globex's core APIs that will be used by the new channels, an API Management platform is needed. To build a wholistic API Management solution, the team decides to adopt an *API First approach* spanning design, governance, mock and management of APIs - which will enable rapid development across teams. 
 
-=== Challenges
-
-There are however a number of challenges with the new requirements
-
-* Adding new channels remains difficult, with a high risk of tight coupling to the existing services
-* Managing, securing and governance to allow access for external partners and development teams
-* Adoption of new technologies requires time and new skills, which are not readily available inside the company.
-
-=== Solution Approach
-In order to cope with these challenges,  +
-
-* The team decides to adopt an *API First approach* for rapid development across teams
-* Since Globex does not want to allow direct access to the backend API services to external channels, access is only allowed through an API Management platform. 
 
 == Goals of this lab
 In this module you will follow this journey:
@@ -38,18 +21,14 @@ In this module you will follow this journey:
 * *Manage and secure* APIs to allow access for external teams
 
 
-== Runtime Architecture
-
-image::globex-runtime-apim.png[width=100%]
-
-
-== Deployment Architecture
+== Architecture Overview
 
 Here is a view of the deployment architecture. +
 
 image::globex-deployment-apim.png[]
 
 
-* The Inventory and Catalog services are deployed on Red Hat OpenShift running on the cloud
-* Red Hat OpenShift API Management is a Red Hat managed services running on OpenShift Dedicated
-* Red Hat API Designer and Red Hat Red Hat Service Registry are trial instances accessed through http://console.redhat.com[http://console.redhat.com^, window=redhatconsole]
+* The Inventory and Catalog services, and the databases are deployed on Red Hat OpenShift. 
+* Red Hat API Designer and Red Hat Service Registry, based  on https://www.apicur.io/[Apicurio^], are used to *Design* and *Govern* the APIs
+* https://microcks.io/[Microcks^], popular opensource project, is used to *mock* the APIs
+* https://www.redhat.com/en/technologies/jboss-middleware/3scale[Red Hat 3scale Management^] is an API Management platform is used to *manage and secure* the APIs. The API gateway is managed by 3scale
