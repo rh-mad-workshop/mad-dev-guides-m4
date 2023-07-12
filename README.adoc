@@ -24,8 +24,8 @@ This workshop aims to showcase how to enhance applications with API management a
 * Red Hat OpenShift API Management
 * Red Hat build of Quarkus
 * Red Hat API Designer
-* Red Hat Service Registry
-* Microcks/Postman
+* Red Hat build of Apicurio Registry
+* Microcks
 * Quay
 
 ## Documentation

@@ -35,6 +35,6 @@ image::globex-deployment-apim.png[]
 
 
 * The Inventory and Catalog services, and the databases are deployed on Red Hat OpenShift. 
-* Red Hat API Designer and Red Hat Service Registry, based  on https://www.apicur.io/[Apicurio^], are used to *Design* and *Govern* the APIs
+* API Designer and Red Hat build of Apicurio Registry, based  on https://www.apicur.io/[Apicurio pojects^], are used to *Design* and *Govern* the APIs
 * https://microcks.io/[Microcks^], popular opensource project, is used to *mock* the APIs
-* https://www.redhat.com/en/technologies/jboss-middleware/3scale[Red Hat 3scale Management^] is an API Management platform is used to *manage and secure* the APIs. The API gateway is managed by 3scale
+* https://www.redhat.com/en/technologies/jboss-middleware/3scale[Red Hat 3scale Management^] is an API Management platform is used to *manage and secure* the APIs. The API gateway is managed by 3scale. 3scale API Management allows you to offer the same set of APIs for different audiences through packaging and unique consumption plans. 

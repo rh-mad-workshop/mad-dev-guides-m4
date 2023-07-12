@@ -7,7 +7,7 @@ Now that the OpenAPI specs are finalised, creation of API mocks will enable para
 * The various  dev teams (such as mobile dev) do not need to wait for the APIs to be completely developed and instead can use these mocks to get realistic responses. 
 * Backend developers in parallel build the backend applications APIs using modern cloud-native frameworks such as https://quarkus.io/[Quarkus^, window=product-page]. 
 
-There are a number of ways to mock APIs including microcks, postman etc. In this labs you will use microcks which has been deployed on OpenShift already.
+There are a number of ways to mock APIs including microcks, postman etc. In this labs you will use Microcks which has been deployed on OpenShift already.
 
 == Goals of this lab
 * Import the Product Catalog API from Service Registry 
@@ -15,6 +15,12 @@ There are a number of ways to mock APIs including microcks, postman etc. In this
 
 
 == Import the Product Catalog API
+
+[NOTE]
+====
+Microcks has been set up in dev-mode within OpenShift globex-apim-%USERID% namespace. You can access the deployment from the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console^,role=external,window=console]. Login with your username and password (`%USERID%/openshift`). Open the *Developer* perspective in the *globex-apim-%USERID%* namespace.
+====
+
 
 . Launch https://microcks-microcks.%SUBDOMAIN%/[microcks^] 
 +
@@ -25,18 +31,24 @@ Microcks that has been setup in developer-mode without authentication only for t
 . Click on the *Import* button as show in the screenshot below
 +
 image::mic-landing.png[]
-. You will be presented with the *Import Jobs* page. Click on the *+Create* button
+. You will be presented with the *Import Jobs* page. Click *+Create* button.
 +
 image:mic-create.png[] 
-. In the *Create a new Job* wizard - *Step 1: Importer Job properties*, fill in the following details as shown in the screenshot below, and click *Next >* +
-*Name*: `Product Catalog` +
-*Repository URL*: 
+. In the *Create a new Job* wizard - *Step 1: Importer Job properties*, fill in the following details as shown in the screenshot below, and click *Next>* button. +
+* *Name*: 
 +
 [.console-input]
 [source,yaml]
-====
+----
+Product Catalog
+----
+* *Repository URL*: 
++
+[.console-input]
+[source,yaml]
+----
 https://service-registry-%USERID%.%SUBDOMAIN%/apis/registry/v2/groups/globex/artifacts/ProductCatalogAPI
-====
+----
 +
 image:mic-create-job.png[] 
 +
