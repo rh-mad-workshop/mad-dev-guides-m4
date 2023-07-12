@@ -1,6 +1,13 @@
 = Introduction
 :imagesdir: ../assets/images
 
+In this module you will discover how an API First Approach provides the right framework to build microservices and APIs based systems. The stages of an API life cycle cover both the implementation life cycle and the management life cycle. Together, these two stages form the complete API life cycle.
+
+* The *Implementation* life cycle collaboratively design an API before determining and developing the various channels and applications that will use the API. The design-first approach advocates for designing the API's contract before writing any code.
+* The *Management* life cucle allows you to manage access to the implement APIs, measure consumption and also track utilization of the APIs to perhaps even monetize the APOs
+
+Learn more about https://developers.redhat.com/topics/api-management[API Management, window=_blank]
+
 == Globex's Digital Transformation Journey
 
 Globex, a fictitious retail company, have completed the modernization of their existing retail e-commerce web application as part of their modernization journey. A schematic overview of the current state of the application as show below:
@@ -16,13 +23,12 @@ To secure the access to Globex's core APIs that will be used by the new channels
 In this module you will follow this journey:
 
 * *Design* an API resulting in an OpenAPI schema
-* Host this OpenAPI schema in a *registry* for use by various teams
+* Host and *Govern* the schema in a *registry* for use by various teams
 * *Mock* the APIs to enable faster inner loop development
 * *Manage and secure* APIs to allow access for external teams
 
 
-== Architecture Overview
-
+== Deployment architecture Overview
 Here is a view of the deployment architecture. +
 
 image::globex-deployment-apim.png[]

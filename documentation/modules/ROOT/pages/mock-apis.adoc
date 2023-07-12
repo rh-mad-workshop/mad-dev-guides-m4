@@ -16,37 +16,40 @@ There are a number of ways to mock APIs including microcks, postman etc. In this
 
 == Import the Product Catalog API
 
-. Launch https://microcks-microcks.apps.cluster-nwwb6.nwwb6.sandbox658.opentlc.com/[microcks^] 
+. Launch https://microcks-microcks.%SUBDOMAIN%/[microcks^] 
 +
 [NOTE]
 ====
 Microcks that has been setup in developer-mode without authentication only for the purpose of this workshop. 
 ====
-+
-https://service-registry-user1.apps.cluster-nwwb6.nwwb6.sandbox658.opentlc.com/apis/registry/v2/groups/globex/artifacts/ProductCatalogAPI
-
 . Click on the *Import* button as show in the screenshot below
 +
 image::mic-landing.png[]
 . You will be presented with the *Import Jobs* page. Click on the *+Create* button
 +
 image:mic-create.png[] 
-. In the *Create a new Job* wizard, fill in the following details as shown in the screenshot below, and click *Next>*
-.. *Name*: `Product Catalog`
-.. *Repository URL*: `\https://service-registry-%USERID%.%SUBDOMAIN%/apis/registry/v2/groups/globex/artifacts/ProductCatalogAPI`
+. In the *Create a new Job* wizard - *Step 1: Importer Job properties*, fill in the following details as shown in the screenshot below, and click *Next >* +
+*Name*: `Product Catalog` +
+*Repository URL*: 
 +
-image:mic-create-job.png[]
+[.console-input]
+[source,yaml]
+====
+https://service-registry-%USERID%.%SUBDOMAIN%/apis/registry/v2/groups/globex/artifacts/ProductCatalogAPI
+====
++
+image:mic-create-job.png[] 
 +
 [NOTE]
 ====
 The Repository URL that you provided is the OpenAPI Schema's URL from Service Registry that you setup in the previous step. 
 ====
-. Since there is not Authentication secret to be provided, click *Next>* in the *Step 2 Authentication options*
+. Since there is not Authentication secret to be provided, click *Next >* in *Step 2 - Authentication options*
 +
 image:mic-create-job-step2.png[] 
-. You can choose to provide a label in the *Labels* step. But since this is not mandatory or relevant to this exercise, you can simply choose to click *Next>* in the *Step 3 Labels*
+. You can choose to provide a label in the *Labels* step. But since this is not mandatory or relevant to this exercise, you can simply choose to click *Next >* in the *Step 3 - Labels*
 image:mic-create-job-step3.png[] 
-. Click *Create* in the *Step 4 Review* step of this wizard 
+. Click *Create* in the *Step 4 - Review* step of this wizard 
 image:mic-create-job-step4.png[] 
 . You would be able to view the Product Catalog API that you imported being listed as shown below. Take special note of the labels as highlighted. If you see an *Error* label, refer to the note shown below
 +
@@ -54,7 +57,6 @@ image:mic-import-success.png[]
 +
 [NOTE]
 ====
-The Repository URL that you provided is the OpenAPI Schema's URL from Service Registry that you setup in the previous step. 
 image:mic-import-error.png[] 
 If there is an error in fetching the content, this could mean that you had provided a different name to the schema within Service Registry other than *ProductCatalogAPI*
 ====

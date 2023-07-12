@@ -5,14 +5,13 @@
 = Design APIs with Red Hat API Designer
 
 == Introduction
-As part of the API-First approach, the first step  - of course - is to design those APIs. API Designer is a tool to design your APIs (OpenAPI, AsyncAPI) and schemas (Apache Avro, Google Protobuf, JSON Schema). You can manage your collection of API and schema designs by creating, importing, and editing. Save your work by downloading your designs locally. 
-
+As part of the API-First approach, the first step, of course, is to design the APIs. API Designer is a tool to design your APIs (OpenAPI, AsyncAPI) and schemas (Apache Avro, Google Protobuf, JSON Schema). 
 
 == Goals of this lab
 In this section you will import an existing API that will be used as a starting point, explore the designer while making a few minor edits. You will then export this to a Service Registry in the next step.
 
 *Note:* +
-With Red Hat API Designer all your designs are stored locally in your browser. Clearing your browser cache or switching to a new browser might result in loss of data. Make sure you save your work by downloading your designs locally or by exporting them to a Red Hat Service Registry instance.
+With Red Hat API Designer all your designs are stored locally in your browser. Clearing your browser cache or switching to a new browser might result in loss of data. Make sure you save your work by downloading your designs locally or as described in the next step export them to a Red Hat Service Registry instance.
 
 
 == Import API 
@@ -21,10 +20,10 @@ To import the OpenAPI draft into API designer, you can import as text OR upload 
 
 [NOTE]
 ====
-In a real-world scenario you would do the inverse: start with an empty API specification, and define the different elements of the spec document. You would then export the spec in JSON or YAML format (by copying the contents from the source editor) to your local file system and push it to version control.
+In a real-world scenario you might start with an empty API specification, and define the different elements of the spec document. You would then export the spec in JSON or YAML format (by copying the contents from the source editor) to your local file system and push it to version control.
 ====
 
-. Launch API Designer by clicking on this link https://apicurio-designer.%SUBDOMAIN%[API Designer^, window=api_designer]
+. Launch API Designer by clicking on https://apicurio-designer.%SUBDOMAIN%[API Designer^, window=api_designer]
 . Click on the New API button.
 
 +
@@ -51,7 +50,7 @@ image::api-designer-api-import-complete.png[]
 . Click on the `2 example(s) defined` link. You will see the list of examples given
 +
 image::api-designer-product-list-response-eg-list.png[]
-. At the right-most side of the *Examples* table, hover the mouse over the `product-list-with-inventory` example and click on the *Edit* button shown as a *pencil icon*. This opens the example's content.
+. At the right-most side of the *Examples* table (scroll sideways), hover the mouse over the `product-list-with-inventory` example and click on the *Edit* button shown as a *pencil icon*. This opens the example's content.
 +
 image::api-click-edit.png[]
 . The example's content is displayed in the popup window.
@@ -73,4 +72,4 @@ image::api-download-as-yaml.png[]
 {empty} +
 
 
-In the next section, you will import this API spec and govern with Red Hat Service Registry.
+In the next section, you will import this API spec and govern it with Red Hat Service Registry.

@@ -2,5 +2,5 @@
 * xref:design-apis.adoc[Design the APIs]
 * xref:service-registry.adoc[Govern the APIs]
 * xref:mock-apis.adoc[Mock APIs]
-* xref:manage-apis-rhoam.adoc[Manage and Secure APIs]
-* xref:appendix.adoc[Appendix]
+* xref:manage-apis.adoc[Manage and Secure APIs]
+
