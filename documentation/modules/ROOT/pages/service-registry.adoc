@@ -83,7 +83,10 @@ image::sr-error.png[]
 [NOTE]
 ====
 In real-life, the content rules are very helpful when APIs are used to manage Service Registry schema updates. To learn more about view the  https://access.redhat.com/documentation/en-us/red_hat_build_of_apicurio_registry[Product Documentation for Red Hat build of Apicurio Registry^, window=product-page]
-
 ====
 
+Remember, this OpenAPI schema can be easily shared with others through the https://service-registry-%USERID%.%SUBDOMAIN%/apis/registry/v2/groups/globex/artifacts/ProductCatalogAPI[OpenAPI Schema's endpoint^]. 
+
+
+You can close all the other browser tabs but this Instructions browser tab you are viewing. +
 In the next step you will explore the use of the ProductCatalogAPI specification to setup mocks.

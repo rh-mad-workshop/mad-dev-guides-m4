@@ -1,12 +1,10 @@
 = Introduction
 :imagesdir: ../assets/images
 
-In this module you will discover how an API First Approach provides the right framework to build microservices and APIs based systems. The stages of an API life cycle cover both the implementation life cycle and the management life cycle. Together, these two stages form the complete API life cycle.
+In this module you will discover how an API First Approach provides the right framework to build microservices and APIs based systems. The stages of an API life cycle cover both the implementation life cycle and the management life cycle.
 
-* The *Implementation* life cycle collaboratively design an API before determining and developing the various channels and applications that will use the API. The design-first approach advocates for designing the API's contract before writing any code.
-* The *Management* life cucle allows you to manage access to the implement APIs, measure consumption and also track utilization of the APIs to perhaps even monetize the APOs
-
-Learn more about https://developers.redhat.com/topics/api-management[API Management, window=_blank]
+* The *Implementation* phase allows you to collaboratively design an API before determining and developing the various channels and applications that will use the API. The design-first approach advocates for designing the API's contract before writing any code.
+* The *Management* phase allows you to manage access to the implement APIs, measure consumption and also track utilization of the APIs to perhaps even monetize the APOs
 
 == Globex's Digital Transformation Journey
 
@@ -23,9 +21,9 @@ To secure the access to Globex's core APIs that will be used by the new channels
 In this module you will follow this journey:
 
 * *Design* an API resulting in an OpenAPI schema
-* Host and *Govern* the schema in a *registry* for use by various teams
+* *Govern* the schema with a registry for use by various teams
 * *Mock* the APIs to enable faster inner loop development
-* *Manage and secure* APIs to allow access for external teams
+* *Manage and Secure* APIs to allow access for external teams
 
 
 == Deployment architecture Overview
@@ -34,7 +32,7 @@ Here is a view of the deployment architecture. +
 image::globex-deployment-apim.png[]
 
 
-* The Inventory and Catalog services, and the databases are deployed on Red Hat OpenShift. 
-* API Designer and Red Hat build of Apicurio Registry, based  on https://www.apicur.io/[Apicurio pojects^], are used to *Design* and *Govern* the APIs
-* https://microcks.io/[Microcks^], popular opensource project, is used to *mock* the APIs
-* https://www.redhat.com/en/technologies/jboss-middleware/3scale[Red Hat 3scale Management^] is an API Management platform is used to *manage and secure* the APIs. The API gateway is managed by 3scale. 3scale API Management allows you to offer the same set of APIs for different audiences through packaging and unique consumption plans. 
+* The services (primarily Inventory and Catalog), and the databases are deployed on Red Hat OpenShift. 
+* API Designer and Red Hat build of Apicurio Registry, based  on https://www.apicur.io/[Apicurio^, window=info], are used to *Design* and *Govern* the APIs
+* https://microcks.io/[Microcks^, window=info], a popular opensource project, is used to *mock* the APIs
+* https://www.redhat.com/en/technologies/jboss-middleware/3scale[Red Hat 3scale Management^,window=info] is an API Management platform is used to *manage and secure* the APIs. The API gateway is managed by 3scale. 3scale API Management allows you to offer the same set of APIs for different audiences through packaging and unique consumption plans. 

@@ -22,13 +22,13 @@ Microcks has been set up in dev-mode within OpenShift globex-apim-%USERID% names
 ====
 
 
-. Launch https://microcks-microcks.%SUBDOMAIN%/[microcks^] 
+. Launch https://microcks-globex-apim-%USERID%.%SUBDOMAIN%/[microcks^] 
 +
 [NOTE]
 ====
 Microcks that has been setup in developer-mode without authentication only for the purpose of this workshop. 
 ====
-. Click on the *Import* button as show in the screenshot below
+. Click on the *Importers* button as show in the screenshot below
 +
 image::mic-landing.png[]
 . You will be presented with the *Import Jobs* page. Click *+Create* button.
@@ -67,7 +67,7 @@ image:mic-create-job-step4.png[]
 +
 image:mic-import-success.png[] 
 +
-[NOTE]
+[CAUTION]
 ====
 image:mic-import-error.png[] 
 If there is an error in fetching the content, this could mean that you had provided a different name to the schema within Service Registry other than *ProductCatalogAPI*
@@ -90,4 +90,6 @@ image:mic-view-api-operation1.png[]
 image:mic-final-mock.png[] 
 . These mock end point of the mock server can be used by the dev teams that are dependent on the APIs, to continue development in parallel without having to wait for the backend services to be fully developed, thereby accelerating time to market.
 
+
+Go ahead and close all the other browser tabs but this Instructions browser tab you are viewing. +
 In the next step, you will learn to protect the API by using Red Hat 3scale API Management. 
