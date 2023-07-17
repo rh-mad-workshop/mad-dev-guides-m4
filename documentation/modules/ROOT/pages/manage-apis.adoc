@@ -51,9 +51,9 @@ apiVersion: capabilities.3scale.net/v1beta1
 kind: Backend
 metadata:
   name: globex-product-catalog-backend
+  namespace: globex-apim-%USERID%
 spec:
   name: "Globex Product Catalog Backend"
-  namespace: globex-apim-%USERID%
   systemName: "globex-product-catalog-backend"
   privateBaseURL: "http://catalog.globex-%USERID%.svc.cluster.local:8080"
   providerAccountRef:
@@ -191,7 +191,7 @@ image:apim-dev-acc-details.png[]
 .. Click *Create Application* button
 +
 image:apim-create-app.png[]
-. Enter the following details in the *Create Application* page:
+. Choose/Enter the following details in the *Create Application* page:
 * Product
 +
 [.console-input]
@@ -242,7 +242,7 @@ Note: In real life, developers will create Applications from the inbuilt 3scale 
 
 To test the secure access of this API, you will use a simple Angular application which reads from the Product Catalog API endpoint and displays it on the browser.
 
-. Click to navigate to to OpenShift Console and view the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[globex-apim-%USERID%^,role=external,window=console] namespace.
+. Navigate to the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console,role=external,window=console] to access the *globex-apim-%USERID%* namespace in it.
 . Click on the *Open URL* icon highlighted in the screenshot below to view the Angular mobile application.
 +
 image:apim-launch-mobile.png[]
@@ -289,7 +289,7 @@ image:apim-mobile-env-complete.png[]
 .. Click on the Pod tab to view the creation of a new pod. You will need to be quick or you may miss the pod creation :)
 +
 image:apim-mobile-new-pod.png[]
-. Launch https://globex-mobile-globex-apim-%USERID%.%SUBDOMAIN%[Globex Mobile^,window=mobile] to view the products in a browser.
+. Launch https://globex-mobile-globex-apim-%USERID%.%SUBDOMAIN%[Globex Mobile^,window=mobile] to view the products in a browser. It may take a couple of seconds for the data to load.
 +
 image:apim-mobile-browser-view.png[]
 
