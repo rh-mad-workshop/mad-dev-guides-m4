@@ -42,10 +42,10 @@ image::globex-deployment-apim.png[]
 
 This module uses two namespaces that have been deployed within your OpenShift environment. 
 
-. In a browser window, navigate to the console of the lab OpenShift cluster at link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-%USERID%?view=graph[console^,role=external,window=openshiftconsole]. Login with your username and password (`%USERID%/openshift`). Navigate to the globex-apim-%USERID% namespace by clicking on the dropdown highlighted to choose other namespaces, and view the deployments with designer, registry etc.
+. In a browser window, navigate to the console of the lab OpenShift cluster at link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[console^,role=external,window=openshiftconsole]. Login with your username and password (`%USERID%/openshift`). Open the *Developer* perspective in the *globex-apim-%USERID%* namespace.
 . The *globex-apim-%USERID%* namespace contains deployments needed to design, govern and manage your APIs.
 +
 image:apim-namespace.png[]
-. The *globex-%USERID%* namespace contains the Backend services deployed by Globex. From the *Developer* perspective, switch to the *globex-%USERID%* namespace by using the drop down. In the Developer perspective, open the Topology view. Expect to see something like this (rearrange the topology as you see fit):
+. The *globex-%USERID%* namespace contains the Backend services deployed by Globex. From the *Developer* perspective, switch to the *globex-%USERID%* namespace by using the drop down. 
 +
 image:globex-namespace.png[]

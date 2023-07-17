@@ -20,7 +20,7 @@ In a real-world scenario you might start with an empty API specification, and de
 ====
 
 . The API Designer has been pre-deployed on OpenShift. Launch the API Designer by clicking on https://apicurio-designer.%SUBDOMAIN%[API Designer^, window=api_designer]
-. Click on the *Open API* button.
+. Click on the *New API* button.
 +
 image::api-designer-import-url.png[]
 * Click on the *Source Tab* on the *New API* page, and delete the entire content in the window. 

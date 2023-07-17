@@ -15,7 +15,7 @@ image::sr-landing.png[]
 +
 [NOTE]
 ====
-Red Hat build of Apicurio Registry has been set up within OpenShift *globex-apim-%USERID%* namespace. You can access the deployment from the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console^,role=external,window=console], and login with(`%USERID%/openshift`). 
+Red Hat build of Apicurio Registry has been set up within OpenShift *globex-apim-%USERID%* namespace. You can access the deployment from the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console^,role=external,window=console], and if required login with(`%USERID%/openshift`). 
 ====
 . Click on the *Upload artifact* button as shown in the above screenshot. You will be presented with a *Upload Artifact* wizard 
 +
