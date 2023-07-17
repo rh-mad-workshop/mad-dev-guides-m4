@@ -22,10 +22,10 @@ Red Hat build of Apicurio Registry has been set up within OpenShift *globex-apim
 image::sr-upload-artifact.png[]
 
 . In the wizard, enter the following details, and click on the *Upload* button. 
-.. Use the exact same values as instructed below to avoid errors in the other sections of this labs.
+.. Use the exact same values as instructed below to avoid errors in the other sections of this module.
 +
 - *Group*: `globex`
-- *ID of the artifact*:  `ProductCatalogAPI`
+- *ID of the artifact*: `ProductCatalogAPI`
 - *Artifact textarea*: Click on *Browse..* button to upload the Product Catalog OpenAPI downloaded in the previous step, or `Drag & drop` the file into the textarea.
 .. Click the *Upload* button
 +
@@ -38,7 +38,7 @@ image::sr-uploaded.png[]
 [NOTE]
 ====
 * This OpenAPI schema can be easily shared with others through the https://service-registry-%USERID%.%SUBDOMAIN%/apis/registry/v2/groups/globex/artifacts/ProductCatalogAPI[OpenAPI Schema's endpoint^].
-* This schema can be used for generating cliend SDK as well by click on the the *Generate cliend SDK* link that can be seen in the screenshot above.
+* This schema can be used for generating client SDK as well by clicking on the *Generate client SDK* link that can be seen in the screenshot above.
 ====
 
 . Click on the *Documentation* tab to view the OpenAPI specifications 
@@ -51,7 +51,7 @@ image::sr-uploaded.png[]
 +
 image::sr-api-content-rules.png[] 
 
-. Click on *Enable* button (highlighted in the above screesnshot) for *Validity rule* and choose *Full* from the dropdown. This rule ensures that the content is valid when the artifact is updated.
+. Click on *Enable* button (highlighted in the above screenshot) for *Validity rule* and choose *Full* from the dropdown. This rule ensures that the content is valid when the artifact is updated.
 +
 image::sr-content-rules.png[]
 
@@ -59,7 +59,7 @@ image::sr-content-rules.png[]
 +
 image::sr-view-content.png[]
 
-. Click on the *Upload new version* button on the top-right of the page, and  aste the content of the schema that you copied in the previous steps into the textbox provided with `Ctrl+V`. 
+. Click on the *Upload new version* button on the top-right of the page, and paste the content of the schema that you copied in the previous steps into the textbox provided with `Ctrl+V`. 
 +
 image::sr-upload-new-popup.png[] 
 
@@ -80,7 +80,7 @@ image::sr-error.png[]
 
 [NOTE]
 ====
-In real-life, the content rules are very helpful when APIs are used to manage Service Registry schema updates. To learn more about view the  https://access.redhat.com/documentation/en-us/red_hat_build_of_apicurio_registry[Product Documentation for Red Hat build of Apicurio Registry^, window=product-page]
+In real-life, the content rules are very helpful when APIs are used to manage Service Registry schema updates. To learn more about view the https://access.redhat.com/documentation/en-us/red_hat_build_of_apicurio_registry[Product Documentation for Red Hat build of Apicurio Registry^, window=product-page]
 ====
 
 Remember, this OpenAPI schema can be easily shared with others through the https://service-registry-%USERID%.%SUBDOMAIN%/apis/registry/v2/groups/globex/artifacts/ProductCatalogAPI[OpenAPI Schema's endpoint^]. 

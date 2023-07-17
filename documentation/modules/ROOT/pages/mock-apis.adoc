@@ -7,7 +7,7 @@ Now that the OpenAPI specs are finalised, creation of API mocks will enable para
 * The various  dev teams (such as mobile dev) do not need to wait for the APIs to be completely developed and instead can use these mocks to get realistic responses. 
 * Backend developers in parallel build the backend applications APIs using modern cloud-native frameworks such as https://quarkus.io/[Quarkus^, window=product-page]. 
 
-There are a number of ways to mock APIs including microcks, postman etc. In this labs you will use Microcks which has been deployed on OpenShift already.
+There are a number of ways to mock APIs including microcks, postman etc. In this module, you will use Microcks which has been deployed on OpenShift already.
 
 == Goals of this lab
 * Import the Product Catalog API from Service Registry 
@@ -25,7 +25,7 @@ Microcks has been set up in dev-mode within OpenShift globex-apim-%USERID% names
 +
 [NOTE]
 ====
-Microcks that has been setup in developer-mode without authentication only for the purpose of this workshop. You can access the deployment from the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console^,role=external,window=console]. Login with your username and password (`%USERID%/openshift`). 
+Microcks has been setup in developer-mode without authentication only for the purpose of this workshop. You can access the deployment from the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console^,role=external,window=console]. Login with your username and password (`%USERID%/openshift`). 
 ====
 . Click on the *Importers* button as show in the screenshot below
 +
@@ -71,27 +71,27 @@ image:mic-import-success.png[]
 image:mic-import-error.png[] 
 If there is an error in fetching the content, this could mean that you had provided a different name to the schema within Service Registry other than *ProductCatalogAPI*
 ====
-. Navigate to the *APIs | Services* to view the API that has been successfully imported. Click on *Product Catalog API* link (highlighted in the screenshow below)
+. Navigate to the *APIs | Services* to view the API that has been successfully imported. Click on *Product Catalog API* link (highlighted in the screenshot below)
 +
 image:mic-view-api.png[] 
 . View the details of the imported Product Catalog
 . Click on the arrow *>* against the first operation *GET /services/product/list/{ids}* to view the details of this operation. 
-** You may note that this operation holds the exmaple that you had edited to include your name :)
+** You may note that this operation holds the example that you had edited to include your name :)
 +
 image:mic-view-api-details.png[] 
 . You will now be able to see the Mock URL, the response code and other details for this specific operation
-. Copy the Mock URL by clicking on the *Copy icon* shown in the Mock tab named *product-list-with-inventory*. Refer to screenshot below.
+. Copy the Mock URL by clicking on the *Copy icon* shown in the Mock tab named *product-list-with-inventory*. Refer to the screenshot below.
 [CAUTION]
 ====
 The order in which the Mocks are displayed could be different from the screenshot. So ensure you are choosing *product-list-with-inventory* and not the *product-list-without-inventory*
 ====
 +
 image:mic-view-api-operation1.png[] 
-. Open a new broswer tab, and navigate to the Mock URL you copied in the above step.
+. Open a new browser tab, and navigate to the Mock URL you copied in the above step.
 . You can view the list of products from the example of the Mock. Note that the name of the Quarkus T-shirt now says `Jaya's Awesome Quarkus T-shirt` (or the name you have for this product)
 +
 image:mic-final-mock.png[] 
-. These mock end point of the mock server can be used by the dev teams that are dependent on the APIs, to continue development in parallel without having to wait for the backend services to be fully developed, thereby accelerating time to market.
+. These mock end points of the mock server can be used by the dev teams that are dependent on the APIs, to continue development in parallel without having to wait for the backend services to be fully developed, thereby accelerating time to market.
 
 
 Go ahead and close all the other browser tabs but this Instructions browser tab you are viewing. +

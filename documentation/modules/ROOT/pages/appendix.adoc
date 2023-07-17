@@ -8,7 +8,7 @@
 
 * *Backends* are Internal APIs which are then bundled into a 3scale Product. It contains at least the URL of the API. It can optionally be configured with mapping rules, methods and metrics to facilitate reusability.
 * *Products* are the Customer-facing APIs. It defines the application plans, and configure APIcast
-* *ActiveDocs* are interactive documentation for your API offered as a framework by 3scale.  You can create API documentation by attaching the Product Catalog OpenAPI schema as a  *3scale ActiveDoc*
+* *ActiveDocs* are interactive documentation for your API offered as a framework by 3scale. You can create API documentation by attaching the Product Catalog OpenAPI schema as a *3scale ActiveDoc*
 * A CRD file allows you to define your own object kinds (Backend, API, ActiveDoc etc) and lets the API Server handle the entire lifecycle of the objects.
 
 << <<manage-apis.adoc#3scale-definitions, back to instructions>>
@@ -22,7 +22,7 @@
 In OpenShift, a Kubernetes Service serves as an internal load balancer and identifies pods which in turn have the applications. If the application needs to be accessed from outside of OpenShift, you will need OpenShift routes. +
 In this workshop, since both 3scale and the Product Catalog API run on OpenShift, 3scale will proxy requests to the backend using Services. This also means the backend cannot be accessed directly from outside OpenShift. 
 
-*Finding the Private endpoint of the Product Catalog service depoyed on OpenShift*
+*Finding the Private endpoint of the Product Catalog service deployed on OpenShift*
 
 * In a browser window, navigate to the console of the lab OpenShift cluster at link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-%USERID%?view=graph[Topology view^,role=external,window=_blank]. 
 
@@ -31,7 +31,7 @@ In this workshop, since both 3scale and the Product Catalog API run on OpenShift
 * Click on the `*catalog icon*` to see the deployment details appear on the right-hand. Under the *Resources* tab, click on *catalog* Service as indicated in the screenshot above.
 +
 image::apim-catalog-service.png[]
-* You will be navigated to the Service Details page the of *catalog* service. Copy the Hostname highlighted in the screenshot below
+* You will be navigated to the Service Details page of the *catalog* service. Copy the *Hostname* highlighted in the screenshot below
 +
 image::apim-catalog-service-details.png[]
 +

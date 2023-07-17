@@ -8,13 +8,13 @@ In this module you will discover how an API First Approach provides the right fr
 
 == Globex's Digital Transformation Journey
 
-Globex, a fictitious retail company, have completed the modernization of their existing retail e-commerce web application as part of their modernization journey. A schematic overview of the current state of the application as show below:
+Globex, a fictitious retail company, has completed the modernization of their existing retail e-commerce web application as part of their modernization journey. A schematic overview of the current state of the application as show below:
 
 image::globex-phase1.png[width=60%]
 
 As a next step Globex would like to expand business with a *multi-channel retailing strategy* through a mobile app and partner channels. This means that the new channels will need access to their core backend API services. 
 
-To secure the access to Globex's core APIs that will be used by the new channels, an API Management platform is needed. To build a wholistic API Management solution, the team decides to adopt an *API First approach* spanning design, governance, mock and management of APIs - which will enable rapid development across teams. 
+To secure the access to Globex's core APIs that will be used by the new channels, an API Management platform is needed. To build a holistic API Management solution, the team decides to adopt an *API First approach* spanning design, governance, mock and management of APIs - which will enable rapid development across teams. 
 
 
 == Goals of this lab
@@ -33,9 +33,9 @@ image::globex-deployment-apim.png[]
 
 
 * The services (primarily Inventory and Catalog), and the databases are deployed on Red Hat OpenShift. 
-* API Designer and Red Hat build of Apicurio Registry, based  on https://www.apicur.io/[Apicurio^, window=info], are used to *Design* and *Govern* the APIs
+* API Designer and Red Hat build of Apicurio Registry, based on https://www.apicur.io/[Apicurio^, window=info], are used to *Design* and *Govern* the APIs
 * https://microcks.io/[Microcks^, window=info], a popular opensource project, is used to *mock* the APIs
-* https://www.redhat.com/en/technologies/jboss-middleware/3scale[Red Hat 3scale Management^,window=info] is an API Management platform is used to *manage and secure* the APIs. 3scale allows you to offer the same set of APIs for different audiences through packaging and unique consumption plans. 
+* https://www.redhat.com/en/technologies/jboss-middleware/3scale[Red Hat 3scale Management^,window=info] is an API Management platform used to *manage and secure* the APIs. 3scale allows you to offer the same set of APIs for different audiences through packaging and unique consumption plans. 
 
 
 == Explore the environment
@@ -43,7 +43,7 @@ image::globex-deployment-apim.png[]
 This module uses two namespaces that have been deployed within your OpenShift environment. 
 
 . In a browser window, navigate to the console of the lab OpenShift cluster at link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-%USERID%?view=graph[console^,role=external,window=openshiftconsole]. Login with your username and password (`%USERID%/openshift`). Navigate to the globex-apim-%USERID% namespace by clicking on the dropdown highlighted to choose other namespaces, and view the deployments with designer, registry etc.
-. The  *globex-apim-%USERID%* namespace contains deployments needed to design govern and manage your APIs.
+. The *globex-apim-%USERID%* namespace contains deployments needed to design, govern and manage your APIs.
 +
 image:apim-namespace.png[]
 . The *globex-%USERID%* namespace contains the Backend services deployed by Globex. From the *Developer* perspective, switch to the *globex-%USERID%* namespace by using the drop down. In the Developer perspective, open the Topology view. Expect to see something like this (rearrange the topology as you see fit):
