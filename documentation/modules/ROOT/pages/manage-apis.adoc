@@ -176,7 +176,7 @@ image::apim-promote-prod.png[]
 
 == Create an Application for the default account
 
-. Navigate to https://3scale-user1-admin.apps.cluster-vxhmd.sandbox1011.opentlc.com/buyers/accounts[Audience section^, window=3scale] of 3scale from the the top menu bar
+. Navigate to https://3scale-%USERID%-admin.apps.cluster-vxhmd.sandbox1011.opentlc.com/buyers/accounts[Audience section^, window=3scale] of 3scale from the the top menu bar
 +
 image:apim-audeince-menu.png[] 
 . You will be shown the *Accounts > Listing* page showing a default *Developer* account that has already been created.
