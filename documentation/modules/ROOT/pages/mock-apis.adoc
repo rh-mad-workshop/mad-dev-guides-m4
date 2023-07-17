@@ -17,16 +17,15 @@ There are a number of ways to mock APIs including microcks, postman etc. In this
 == Import the Product Catalog API
 
 [NOTE]
-====
-Microcks has been set up in dev-mode within OpenShift globex-apim-%USERID% namespace. You can access the deployment from the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console^,role=external,window=console]. Login with your username and password (`%USERID%/openshift`). Open the *Developer* perspective in the *globex-apim-%USERID%* namespace.
-====
+
+Microcks has been set up in dev-mode within OpenShift globex-apim-%USERID% namespace. 
 
 
 . Launch https://microcks-globex-apim-%USERID%.%SUBDOMAIN%/[microcks^] 
 +
 [NOTE]
 ====
-Microcks that has been setup in developer-mode without authentication only for the purpose of this workshop. 
+Microcks that has been setup in developer-mode without authentication only for the purpose of this workshop. You can access the deployment from the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console^,role=external,window=console]. Login with your username and password (`%USERID%/openshift`). 
 ====
 . Click on the *Importers* button as show in the screenshot below
 +
@@ -81,7 +80,11 @@ image:mic-view-api.png[]
 +
 image:mic-view-api-details.png[] 
 . You will now be able to see the Mock URL, the response code and other details for this specific operation
-. Copy the Mock URL by clicking on the *Copy icon* shown in the first tab *product-list-with-inventory*. Refer to screenshot below.
+. Copy the Mock URL by clicking on the *Copy icon* shown in the Mock tab named *product-list-with-inventory*. Refer to screenshot below.
+[CAUTION]
+====
+The order in which the Mocks are displayed could be different from the screenshot. So ensure you are choosing *product-list-with-inventory* and not the *product-list-without-inventory*
+====
 +
 image:mic-view-api-operation1.png[] 
 . Open a new broswer tab, and navigate to the Mock URL you copied in the above step.
