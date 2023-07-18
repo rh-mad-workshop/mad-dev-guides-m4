@@ -26,18 +26,21 @@ image:3scale-landing-page.png[]
 
 [#3scale-definitions]
 == Create Mobile Gateway Backend, Product and ActiveDoc on 3scale
-To integrate and manage the Product Catalog API in 3scale, you need to create Products and Backend. In this workshop you will be using the *3scale Operator* that creates and maintains 3scale on OpenShift with custom resource definitions (CRDs). +
-*Note*: <<appendix.adoc#3scale-definitions, Learn about Backends, Products, ActiveDocs and CRDs>>
 
----
+To integrate and manage the Product Catalog API in 3scale, you need to create Products and Backend. 
+
+In this lab you will declare the 3scale assets like Product and Backend as Kubernetes Custom Resources. The Custom Resources are detected by the 3scale operator which applies and synchronizes the Custom Resources (CRDs) on the 3scale platform.
+
+Note: <<appendix.adoc#3scale-definitions, Click to learn more about Backends, Products, ActiveDocs and CRDs>>
 
 [#create-backend]
 === Create 3scale Backend
 
 To create the Backend for Product Catalog API Gateway, you will need the Service URL of Product Catalog deployment which is already running on OpenShift. +
-*Note*: <<appendix.adoc#openshift-service, Learn about OpenShift/Kubernetes Service and how to find it>>
 
-. Navigate to the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console^,role=external,window=console]. Login with your username and password (`%USERID%/openshift`). Open the *Developer* perspective in the *globex-apim-%USERID%* 
+Note: <<appendix.adoc#openshift-service, Click to learn more about OpenShift/Kubernetes Service and how to find it>>
+
+. Navigate to the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console^,role=external,window=console]. If required, login with your username and password (`%USERID%/openshift`). Open the *Developer* perspective in the *globex-apim-%USERID%* 
 . On the OpenShift console, click on the image:console-import-yaml.png[] icon in the top menu on the right. This opens an editor where you can enter a Kubernetes resource definition in YAML or JSON format.
 +
 image:apim-openshift-import.png[]
@@ -81,7 +84,7 @@ image:apim-create-backend-details.png[]
 +
 image:apim-backend-created.png[] 
 +
-.. Click on the Backend *Globex Product Catalog Backend* to view the Backend overview page.
+.. Click on the Backend *Globex Product Catalog Backend* link to view the Backend overview page.
 +
 image:apim-backend-overview.png[] 
 
@@ -105,7 +108,7 @@ metadata:
   name: globex-product-catalog-product
   namespace: globex-apim-%USERID%
 spec:
-  name: "globex-product-catalog-product"
+  name: "Globex Product Catalog"
   systemName: "globex-product-catalog-product"
   providerAccountRef:
     name: 3scale-tenant-secret
@@ -146,7 +149,7 @@ image:apim-prod-activedoc-created.png[]
 . Click on https://3scale-%USERID%-admin.%SUBDOMAIN%[3scale^,window=3scale] to view the Product and ActiveDoc created for you
 +
 image:apim-prod-created.png[] 
-. Click on the Product *globex-product-catalog-product* to view the overview page. Note that the *Backends* and the *Published Application Plans* that you created have been attached to the Product.
+. Click on the Product *Globex Product Catalog* link to view the overview page. Note that the *Backends* and the *Published Application Plans* that you created have been attached to the Product.
 +
 image:apim-prod-overview.png[] 
 
@@ -158,11 +161,13 @@ image:apim-prod-activedocs.png[]
 .. Click on the *globex-product-catalog-activedoc* ActiveDoc to view the API
 +
 image:apim-activedoc-view.png[]
-. Before you can start accessing the Product Catalog API, you must promote the APIcast configuration as below. +
-[#apicast]
-*Note*: <<appendix.adoc#3scale-definitions, Learn about APIcast>>
 
-. From https://3scale-%USERID%-admin.%SUBDOMAIN%[3scale homepage^,window=3scale], under the Products section, click on *globex-product-catalog-product* to view the Product's overview page.
+[#apicast]
+. Before you can start accessing the Product Catalog API, you must promote the APIcast configuration as below. +
++
+Note: <<appendix.adoc#apicast, Click to learn more about APIcast>>
+
+. From https://3scale-%USERID%-admin.%SUBDOMAIN%[3scale homepage^,window=3scale], under the Products section, click on *Globex Product Catalog* to view the Product's overview page.
 . From the left hand menu, navigate to *Integration* > *Configuration*
 +
 image:apim-prod-integ-config.png[]
@@ -197,7 +202,7 @@ image:apim-create-app.png[]
 [.console-input]
 [source,yaml]
 ----
-globex-product-catalog-product
+Globex Product Catalog
 ----
 * Application plan
 +
@@ -231,7 +236,7 @@ image:apim-create-app-success.png[]
 
 [NOTE]
 ====
-Note: In real life, developers will create Applications from the inbuilt 3scale Developer Portal
+Note: In real life, developers will create Applications from the integrated 3scale Developer Portal.
 ====
 
 {empty}
@@ -258,12 +263,12 @@ image:apim-mobile-deployment-panel.png[]
 . Click on the *Environment* tab from the Deployment details page.
 +
 image:apim-mobile-deployment-details.png[]
-. Note that there are two variables with values `replace-me`. You will need to upate these variables which will need to be fetched from 3scale. +
+. Note that there are two variables with values `replace-me`. You will need to update these variables which will need to be fetched from 3scale. +
 . Update the 2 placeholders as instructed below
 +
 image:apim-mobile-env.png[]
-. *GLOBEX_PRODUCT_CATALOG_API*: We will use the Staging APICast URL of the *globex-product-catalog-product* created in 3scale. 
-* Launch https://3scale-%USERID%-admin.%SUBDOMAIN%[3scale Dashboard^,window=3scale], and click on *globex-product-catalog-product* to view the Product Details
+. *GLOBEX_PRODUCT_CATALOG_API*: We will use the Staging APICast URL of the *Globex Product Catalog* created in 3scale. 
+* Launch https://3scale-%USERID%-admin.%SUBDOMAIN%[3scale Dashboard^,window=3scale], and click on *Globex Product Catalog* link to view the Product Details
 * Next navigate to *Integration > Configuration* from the left hand navigation, and copy the URL show under *Staging APIcast* section
 +
 image:apim-staging-url.png[]

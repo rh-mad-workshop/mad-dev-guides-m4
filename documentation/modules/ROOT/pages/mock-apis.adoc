@@ -25,7 +25,7 @@ Microcks has been set up in dev-mode within OpenShift globex-apim-%USERID% names
 +
 [NOTE]
 ====
-Microcks has been setup in developer-mode without authentication only for the purpose of this workshop. You can access the deployment from the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console^,role=external,window=console]. Login with your username and password (`%USERID%/openshift`). 
+Microcks has been setup in developer-mode without authentication only for the purpose of this workshop. You can access the deployment from the link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[OpenShift Console^,role=external,window=console]. If required, login with your username and password (`%USERID%/openshift`). 
 ====
 . Click on the *Importers* button as show in the screenshot below
 +
@@ -55,7 +55,7 @@ image:mic-create-job.png[]
 ====
 The Repository URL that you provided is the OpenAPI Schema's URL from Service Registry that you setup in the previous step. 
 ====
-. Since there is not Authentication secret to be provided, click *Next >* in *Step 2 - Authentication options*
+. Since there is no Authentication secret to be provided, click *Next >* in *Step 2 - Authentication options*
 +
 image:mic-create-job-step2.png[] 
 . You can choose to provide a label in the *Labels* step. But since this is not mandatory or relevant to this exercise, you can simply choose to click *Next >* in the *Step 3 - Labels*
@@ -81,6 +81,7 @@ image:mic-view-api.png[]
 image:mic-view-api-details.png[] 
 . You will now be able to see the Mock URL, the response code and other details for this specific operation
 . Copy the Mock URL by clicking on the *Copy icon* shown in the Mock tab named *product-list-with-inventory*. Refer to the screenshot below.
++
 [CAUTION]
 ====
 The order in which the Mocks are displayed could be different from the screenshot. So ensure you are choosing *product-list-with-inventory* and not the *product-list-without-inventory*
