@@ -58,7 +58,7 @@ image::api-designer-sample-updated.png[]
 . The changes made are now visible on the main screen. 
 +
 image::api-designer-sample-edit-complete.png[]
-* The OpenAPI specification is now ready to be downloaded. Click on the _down arrow_ button adjacent to *Save As..* and then choose *Save as YAML* button found on top-right of the page. The file gets saved automatically in the *Downloads folder* of your computer.
+* The OpenAPI specification is now ready to be downloaded. Click on the _down arrow_ button adjacent to *Save As..* and then choose *Save as JSON* button found on top-right of the page. The file gets saved automatically in the *Downloads folder* of your computer.
 +
 image::api-download-as-yaml.png[]
 * The Product Catalog OpenAPI spec is ready to be governed with a Service Registry.
