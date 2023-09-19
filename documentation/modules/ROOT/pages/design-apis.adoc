@@ -12,7 +12,7 @@ In this section you will import an existing API that will be used as a starting 
 
 == Import API 
 
-To import the OpenAPI draft into API designer, you can import the content as text OR upload as file. To keep things simple in this workshop, you will import the content by simply pasting the draft spec as YAML based text into the API designer.
+To import the OpenAPI draft into API designer, you can import the content as text OR upload as file. To keep things simple in this workshop, you will import the content by simply pasting the draft spec into the API designer.
 
 [NOTE]
 ====
@@ -60,7 +60,7 @@ image::api-designer-sample-updated.png[]
 image::api-designer-sample-edit-complete.png[]
 * The OpenAPI specification is now ready to be downloaded. Click on the _down arrow_ button adjacent to *Save As..* and then choose *Save as YAML* button found on top-right of the page. The file gets saved automatically in the *Downloads folder* of your computer.
 +
-image::api-download-as-yaml.png[]
+image::api-download-as-json.png[]
 * The Product Catalog OpenAPI spec is ready to be governed with a Service Registry.
 
 
