@@ -42,7 +42,19 @@ image::globex-deployment-apim.png[]
 
 This module uses two namespaces that have been deployed within your OpenShift environment. 
 
-. In a browser window, navigate to the console of the lab OpenShift cluster at link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[console^,role=external,window=openshiftconsole]. Login with your username and password (`%USERID%/openshift`). Open the *Developer* perspective in the *globex-apim-%USERID%* namespace.
+First, open a new browser to access the link:https://console-openshift-console.%SUBDOMAIN%/dev-pipelines/ns/cicd-%USERID%[OpenShift Pipeline^].
+
+Use the following credentials if you haven't logged in to the OpenShift cluster before. OpenShift is already integrated with https://access.redhat.com/products/red-hat-single-sign-on/[Red Hat Single Sign On^].
+
+image::sso_login.png[openshift_login]
+
+.  Login using your credentials:
+
+** Username: `%USERID%`
+** Password: `{openshift-password}`
+
+
+. Next, navigate to the console of the lab OpenShift cluster at link:https://console-openshift-console.%SUBDOMAIN%/topology/ns/globex-apim-%USERID%?view=graph[console^,role=external,window=openshiftconsole]. Login with your username and password (`%USERID%/openshift`). Open the *Developer* perspective in the *globex-apim-%USERID%* namespace.
 . The *globex-apim-%USERID%* namespace contains deployments needed to design, govern and manage your APIs.
 +
 image:apim-namespace.png[]
